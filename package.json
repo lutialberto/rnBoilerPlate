@@ -8,11 +8,21 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "android-dev": "SET ENVFILE=.env.dev && react-native run-android",
+    "android-qa": "SET ENVFILE=.env.qa && react-native run-android",
+    "android-prod": "SET ENVFILE=.env.prod && react-native run-android",
+    "android-dev-apk": "SET ENVFILE=.env.dev && cd android && gradlew assembleRelease",
+    "android-qa-apk": "SET ENVFILE=.env.qa && cd android && gradlew assembleRelease",
+    "android-prod-apk": "SET ENVFILE=.env.prod && cd android && gradlew assembleRelease",
+    "android-dev-aab": "SET ENVFILE=.env.dev && cd android && gradlew bundleRelease",
+    "android-qa-aab": "SET ENVFILE=.env.qa && cd android && gradlew bundleRelease",
+    "android-prod-aab": "SET ENVFILE=.env.prod && cd android && gradlew bundleRelease"
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.71.0"
+    "react-native": "0.71.0",
+    "react-native-config": "^1.4.12"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
