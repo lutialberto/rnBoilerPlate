@@ -23,8 +23,10 @@
     "react": "18.2.0",
     "react-native": "0.71.0",
     "react-native-config": "^1.4.12",
+    "react-native-encrypted-storage": "^4.0.3",
     "react-native-svg": "^13.7.0",
-    "react-native-svg-transformer": "^1.0.0"
+    "react-native-svg-transformer": "^1.0.0",
+    "zustand": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
