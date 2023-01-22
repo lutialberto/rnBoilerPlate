@@ -4,6 +4,7 @@ import CopyIcon from '~/assets/svg/icons_copy.svg';
 import {useThemeHandler} from '~/hooks/theme/useThemeHandler';
 import {ColorProps} from '~/hooks/theme/Models';
 import AppScreenContainer from '~/components/containers/screenContainer/AppScreenContainer';
+import PrimaryText from '~/components/texts/primaryText/PrimaryText';
 
 const App = () => {
   const {getColors, changeTheme} = useThemeHandler();
@@ -15,13 +16,13 @@ const App = () => {
 
   return (
     <AppScreenContainer>
-      <Text>App</Text>
+      <PrimaryText text="App" />
       <CopyIcon style={styles.icon} />
-      <TouchableOpacity onPress={changeToDarkTheme} style={styles.text}>
-        <Text>Poner modo oscuro</Text>
+      <TouchableOpacity onPress={changeToDarkTheme}>
+        <PrimaryText text="Poner modo oscuro" />
       </TouchableOpacity>
-      <TouchableOpacity onPress={changeToLightTheme} style={styles.text}>
-        <Text>Poner modo claro</Text>
+      <TouchableOpacity onPress={changeToLightTheme}>
+        <PrimaryText text="Poner modo claro" />
       </TouchableOpacity>
     </AppScreenContainer>
   );
@@ -33,11 +34,6 @@ const getStyles = (colors: ColorProps) => {
   return StyleSheet.create({
     icon: {
       color: colors.fontColor,
-    },
-    text: {
-      padding: 10,
-      borderWidth: 1,
-      borderColor: colors.fontColor,
     },
   });
 };
