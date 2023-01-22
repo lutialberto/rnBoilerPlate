@@ -1,12 +1,12 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import CopyIcon from '~/assets/svg/icons_copy.svg';
-import FwkScreenContainer from '~/fwk/containers/screenContainer/FwkScreenContainer';
-import { useThemeHandler } from '~/hooks/theme/useThemeHandler';
-import { ColorProps } from '~/hooks/theme/Models';
+import {useThemeHandler} from '~/hooks/theme/useThemeHandler';
+import {ColorProps} from '~/hooks/theme/Models';
+import AppScreenContainer from '~/components/containers/screenContainer/AppScreenContainer';
 
 const App = () => {
-  const { getColors, changeTheme } = useThemeHandler();
+  const {getColors, changeTheme} = useThemeHandler();
   const colors = getColors();
   const styles = getStyles(colors);
 
@@ -14,7 +14,7 @@ const App = () => {
   const changeToLightTheme = () => changeTheme('light');
 
   return (
-    <FwkScreenContainer>
+    <AppScreenContainer>
       <Text>App</Text>
       <CopyIcon style={styles.icon} />
       <TouchableOpacity onPress={changeToDarkTheme} style={styles.text}>
@@ -23,7 +23,7 @@ const App = () => {
       <TouchableOpacity onPress={changeToLightTheme} style={styles.text}>
         <Text>Poner modo claro</Text>
       </TouchableOpacity>
-    </FwkScreenContainer>
+    </AppScreenContainer>
   );
 };
 
