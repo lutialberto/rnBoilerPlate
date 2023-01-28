@@ -68,10 +68,22 @@ export const TRANSLATOR = {
       },
     },
     screens: {
-      app: {
-        title: 'App',
-        light: 'Poner modo claro',
-        dark: 'Poner modo oscuro',
+      home: {
+        buttons: {
+          buttons: 'Tipos de botones',
+        },
+        screens: {
+          buttons: {
+            title: 'Tipos de botones',
+            defaultVariant: 'Botón por defecto',
+            secondaryVariant: 'Botón secundario',
+            secondaryNoBorderVariant: 'Botón secundario sin bordes',
+            enableButtons: 'Presiona para habilitar botones',
+            disableButtons: 'Presiona para deshabilitar botones',
+            iconButton: 'Botón con ícono',
+            shareTemplate: 'Esto es un template para compartir',
+          },
+        },
       },
     },
   },
