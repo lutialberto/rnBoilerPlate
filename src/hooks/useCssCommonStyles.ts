@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import Fonts from '~/constants/Fonts';
 import {ColorProps} from './theme/Models';
 import {useThemeHandler} from './theme/useThemeHandler';
 import {useDimentions} from './useDimentions';
@@ -12,7 +13,7 @@ export const useCssCommonStyles = () => {
     return StyleSheet.create({
       primaryText: {
         color: colors.fontColor,
-        fontFamily: 'Arial',
+        fontFamily: Fonts.Regular,
         fontSize: vw * 5,
       },
     });

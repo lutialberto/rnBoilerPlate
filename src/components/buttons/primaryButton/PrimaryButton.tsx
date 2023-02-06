@@ -91,7 +91,6 @@ const getStyles = (colors: ColorProps) => {
       paddingVertical: vw * 2,
       paddingHorizontal: vw * 3,
       flexDirection: 'row',
-      marginHorizontal: vw * 25,
     },
     defaultDisabledContainer: {
       backgroundColor: colors.disabledColor,

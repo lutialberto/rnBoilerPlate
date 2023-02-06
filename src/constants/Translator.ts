@@ -71,6 +71,7 @@ export const TRANSLATOR = {
       home: {
         buttons: {
           buttons: 'Tipos de botones',
+          texts: 'Tipos de textos',
         },
         screens: {
           buttons: {
@@ -82,6 +83,16 @@ export const TRANSLATOR = {
             disableButtons: 'Presiona para deshabilitar botones',
             iconButton: 'Botón con ícono',
             shareTemplate: 'Esto es un template para compartir',
+          },
+          texts: {
+            header: 'Tipos de textos',
+            title: 'Titulo',
+            label: 'Label',
+            generic: 'Texto genérico',
+            hideableText: 'Texto escondible 123',
+            show: 'Mostrar',
+            hide: 'Esconder',
+            error: 'Error',
           },
         },
       },
