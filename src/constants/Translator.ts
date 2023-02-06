@@ -72,6 +72,7 @@ export const TRANSLATOR = {
         buttons: {
           buttons: 'Tipos de botones',
           texts: 'Tipos de textos',
+          loading: 'Tipos de carga',
         },
         screens: {
           buttons: {
@@ -93,6 +94,11 @@ export const TRANSLATOR = {
             show: 'Mostrar',
             hide: 'Esconder',
             error: 'Error',
+          },
+          loading: {
+            header: 'Tipos de carga',
+            text1: 'Este texto se suporpone con el spinner',
+            text2: 'Este texto no se suporpone con el spinner',
           },
         },
       },
