@@ -8,11 +8,13 @@ import {
   ROUTE_LOADING,
   ROUTE_MODALS,
   ROUTE_TEXTS,
+  ROUTE_TOASTS,
 } from '../routes/SignedInRoutes';
 import ButtonsScreen from '~/screens/home/screens/buttons/ButtonsScreen';
 import TextsScreen from '~/screens/home/screens/texts/TextsScreen';
 import LoadingScreen from '~/screens/home/screens/loading/LoadingScreen';
 import ModalsScreen from '~/screens/home/screens/modals/ModalsScreen';
+import ToastsScreen from '~/screens/home/screens/toasts/ToastsScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -23,6 +25,7 @@ const signedInScreens = () => (
     <Stack.Screen name={ROUTE_TEXTS} component={TextsScreen} />
     <Stack.Screen name={ROUTE_LOADING} component={LoadingScreen} />
     <Stack.Screen name={ROUTE_MODALS} component={ModalsScreen} />
+    <Stack.Screen name={ROUTE_TOASTS} component={ToastsScreen} />
   </>
 );
 
