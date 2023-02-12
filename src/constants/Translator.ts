@@ -74,6 +74,7 @@ export const TRANSLATOR = {
           texts: 'Tipos de textos',
           loading: 'Tipos de carga',
           modals: 'Tipos de modales',
+          toasts: 'Tipos de tostadas',
         },
         screens: {
           buttons: {
@@ -105,6 +106,25 @@ export const TRANSLATOR = {
             header: 'Modals',
             showModal: 'Mostrar modal',
             showBottomSheet: 'Mostrar bottom sheet',
+          },
+          toasts: {
+            header: 'Tipos de tostadas',
+            buttons: {
+              error: 'Mostrar error',
+              warning: 'Mostrar warning',
+              success: 'Mostrar exito',
+              info: 'Mostrar info',
+            },
+            messages: {
+              error1: 'Mensaje error1',
+              error2: 'Mensaje error2',
+              warning1: 'Mensaje warning1',
+              warning2: 'Mensaje warning2',
+              success1: 'Mensaje existo1',
+              success2: 'Mensaje existo2',
+              info1: 'Mensaje info1',
+              info2: 'Mensaje info2',
+            },
           },
         },
       },

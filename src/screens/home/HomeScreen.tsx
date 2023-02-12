@@ -10,6 +10,7 @@ import {
   ROUTE_LOADING,
   ROUTE_MODALS,
   ROUTE_TEXTS,
+  ROUTE_TOASTS,
 } from '~/navigation/routes/SignedInRoutes';
 
 const translator = TRANSLATION_SCREENS.home;
@@ -33,6 +34,10 @@ const HomeScreen = () => {
     {
       label: translator.buttons.modals,
       onPress: () => navigator.navigate(ROUTE_MODALS),
+    },
+    {
+      label: translator.buttons.toasts,
+      onPress: () => navigator.navigate(ROUTE_TOASTS),
     },
   ];
 
