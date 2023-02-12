@@ -7,6 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import {MainScreenNavigationType} from '~/navigation/MainStack';
 import {
   ROUTE_BUTTONS,
+  ROUTE_FORMS,
   ROUTE_LOADING,
   ROUTE_MODALS,
   ROUTE_TEXTS,
@@ -38,6 +39,10 @@ const HomeScreen = () => {
     {
       label: translator.buttons.toasts,
       onPress: () => navigator.navigate(ROUTE_TOASTS),
+    },
+    {
+      label: translator.buttons.forms,
+      onPress: () => navigator.navigate(ROUTE_FORMS),
     },
   ];
 

@@ -7,6 +7,7 @@ export type MainStackParamList = {
   Loading: undefined;
   Modals: undefined;
   Toasts: undefined;
+  Forms: undefined;
 };
 
 export type MainScreenNavigationType = NativeStackNavigationProp<MainStackParamList>;
