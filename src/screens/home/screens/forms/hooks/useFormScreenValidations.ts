@@ -22,7 +22,7 @@ export const useFormScreenValidations = () => {
 
     if (!flag) errorsFound.flag = TRANSLATION_VALIDATIONS.required;
 
-    if (isEmpty(selectedOption)) errorsFound.lastName = TRANSLATION_VALIDATIONS.required;
+    if (isEmpty(selectedOption)) errorsFound.selectedOption = TRANSLATION_VALIDATIONS.required;
 
     const otpWithErrors = isOtpNumberOk(otpCode, 4);
     if (otpWithErrors) errorsFound.otpCode = otpWithErrors;

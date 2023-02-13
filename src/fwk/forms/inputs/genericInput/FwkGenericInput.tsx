@@ -36,33 +36,31 @@ const FwkGenericInput = ({
 
   return (
     <View>
-      <>
-        {labelComponent ?? <FwkGenericText text={label} style={labelStyle} />}
-        <View style={inputContainerStyle}>
-          <TextInput
-            value={value}
-            placeholder={placeholder}
-            placeholderTextColor={placeholderTextColor}
-            style={style}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            onChangeText={value => onChange(value)}
-            editable={enabled}
-            secureTextEntry={passwordHidden}
-          />
-          {type === 'password' && enabled && (
-            <TouchableOpacity onPress={() => setPasswordHidden((prev: boolean) => !prev)}>
-              <>{renderPasswordIcon()}</>
-            </TouchableOpacity>
-          )}
-          {value !== '' && enabled && (
-            <TouchableOpacity onPress={() => onChange('')}>
-              <>{clearIcon}</>
-            </TouchableOpacity>
-          )}
-        </View>
-        {errorMessageComponent ?? <FwkGenericText style={errorMessageStyle} text={errorMessage} />}
-      </>
+      {labelComponent ?? <FwkGenericText text={label} style={labelStyle} />}
+      <View style={inputContainerStyle}>
+        <TextInput
+          value={value}
+          placeholder={placeholder}
+          placeholderTextColor={placeholderTextColor}
+          style={style}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          onChangeText={value => onChange(value)}
+          editable={enabled}
+          secureTextEntry={passwordHidden}
+        />
+        {type === 'password' && enabled && (
+          <TouchableOpacity onPress={() => setPasswordHidden((prev: boolean) => !prev)}>
+            <>{renderPasswordIcon()}</>
+          </TouchableOpacity>
+        )}
+        {value !== '' && enabled && (
+          <TouchableOpacity onPress={() => onChange('')}>
+            <>{clearIcon}</>
+          </TouchableOpacity>
+        )}
+      </View>
+      {errorMessageComponent ?? <FwkGenericText style={errorMessageStyle} text={errorMessage} />}
     </View>
   );
 };

@@ -7,6 +7,7 @@ import GenericInput from '~/components/forms/inputs/genericInput/GenericInput';
 import {useForm} from '~/hooks/useForm';
 import {useFormScreenValidations} from './hooks/useFormScreenValidations';
 import PrimaryButton from '~/components/buttons/primaryButton/PrimaryButton';
+import BooleanInput from '~/components/forms/inputs/booleanInput/BooleanInput';
 
 const translator = TRANSLATION_SCREENS.home.screens.forms;
 
@@ -51,6 +52,12 @@ const FormsScreen = () => {
         errorMessage={errors.lastName}
         label={translator.form.lastNameLabel}
         placeholder={translator.form.lastNamePlaceholder}
+      />
+      <BooleanInput
+        value={values.flag}
+        onChange={value => handleChange('flag', value)}
+        errorMessage={errors.flag}
+        label={translator.form.flagLabel}
       />
       <PrimaryButton onPress={handleSubmit} label={TRANSLATION_BUTTONS.save} />
     </AppScreenContainer>
