@@ -1,5 +1,6 @@
 import {TRANSLATOR} from '~/constants/Translator';
-import {TOAST_TYPES, useToasts} from './toasts/useToasts';
+import {TOAST_TYPES} from './toasts/Models';
+import {useToasts} from './toasts/useToasts';
 
 const translator = TRANSLATOR.components.errors;
 
