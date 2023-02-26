@@ -17,6 +17,7 @@ export const TRANSLATOR = {
         share: 'Compartir',
         send: 'Enviar',
         resend: 'Reenviar',
+        enter: 'Ingresar',
       },
       inputs: {
         selector: 'Selecione...',
@@ -84,6 +85,7 @@ export const TRANSLATOR = {
           modals: 'Tipos de modales',
           toasts: 'Tipos de tostadas',
           forms: 'Tipos de formularios',
+          login: 'Login mock',
         },
         screens: {
           buttons: {

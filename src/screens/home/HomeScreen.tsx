@@ -8,6 +8,7 @@ import {MainScreenNavigationType} from '~/navigation/MainStack';
 import {
   ROUTE_BUTTONS,
   ROUTE_FORMS,
+  ROUTE_HOME_LOGIN,
   ROUTE_LOADING,
   ROUTE_MODALS,
   ROUTE_TEXTS,
@@ -43,6 +44,10 @@ const HomeScreen = () => {
     {
       label: translator.buttons.forms,
       onPress: () => navigator.navigate(ROUTE_FORMS),
+    },
+    {
+      label: translator.buttons.login,
+      onPress: () => navigator.navigate(ROUTE_HOME_LOGIN),
     },
   ];
 
