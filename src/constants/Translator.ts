@@ -75,6 +75,7 @@ export const TRANSLATOR = {
           loading: 'Tipos de carga',
           modals: 'Tipos de modales',
           toasts: 'Tipos de tostadas',
+          forms: 'Tipos de formularios',
         },
         screens: {
           buttons: {
@@ -124,6 +125,20 @@ export const TRANSLATOR = {
               success2: 'Mensaje existo2',
               info1: 'Mensaje info1',
               info2: 'Mensaje info2',
+            },
+          },
+          forms: {
+            header: 'Formularios',
+            form: {
+              passwordLabel: 'Contraseña',
+              passwordPlaceholder: 'Ingresa tu contraseña',
+              firstNameLabel: 'Nombre',
+              firstNamePlaceholder: 'Ingresa tu nombre',
+              lastNameLabel: 'Apellido',
+              lastNamePlaceholder: 'Ingresa tu apellido',
+              optionsLabel: 'Opciones',
+              optionsWithSearchLabel: 'Tiene buscador',
+              flagLabel: 'Booleano',
             },
           },
         },
