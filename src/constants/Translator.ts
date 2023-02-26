@@ -66,6 +66,14 @@ export const TRANSLATOR = {
           text2: 'fue copiado al portapapeles!',
         },
       },
+      forms: {
+        login: {
+          emailLabel: 'Mail',
+          emailPlaceholder: 'Ingresa tu mail',
+          passwordLabel: 'Contraseña',
+          passwordPlaceholder: 'Ingresa tu contraseña',
+        },
+      },
     },
     screens: {
       home: {
@@ -140,6 +148,9 @@ export const TRANSLATOR = {
               optionsWithSearchLabel: 'Tiene buscador',
               flagLabel: 'Booleano',
             },
+          },
+          login: {
+            header: 'Login',
           },
         },
       },

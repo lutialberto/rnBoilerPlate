@@ -8,6 +8,8 @@ export type MainStackParamList = {
   Modals: undefined;
   Toasts: undefined;
   Forms: undefined;
+
+  'Home/Login': undefined;
 };
 
 export type MainScreenNavigationType = NativeStackNavigationProp<MainStackParamList>;
