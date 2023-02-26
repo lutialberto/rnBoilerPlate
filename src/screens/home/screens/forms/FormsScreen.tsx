@@ -98,7 +98,7 @@ const FormsScreen = () => {
       <ScrollView contentContainerStyle={styles.container}>
         <PrimaryButton
           onPress={() => navigator.navigate(ROUTE_FORMS_LOGIN)}
-          label={translator.forms.login}
+          label={translator.forms.login.goToLabel}
           containerStyle={styles.button}
         />
       </ScrollView>

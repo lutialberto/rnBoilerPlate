@@ -6,7 +6,7 @@ import LoginForm from './components/loginForm/LoginForm';
 import {LoginFormInputs} from './models/LoginFormInputs';
 import {IFormErrors} from '~/hooks/forms/Models';
 
-const translator = TRANSLATION_SCREENS.home.screens.login;
+const translator = TRANSLATION_SCREENS.home.screens.forms.forms.login;
 
 const LoginScreen = () => {
   const onSuccess = (values: LoginFormInputs) => console.log('success', {values});

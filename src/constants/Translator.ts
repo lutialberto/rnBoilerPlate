@@ -150,11 +150,15 @@ export const TRANSLATOR = {
               flagLabel: 'Booleano',
             },
             forms: {
-              login: 'Login mock',
+              login: {
+                goToLabel: 'Login mock',
+                header: 'Login',
+              },
+              register: {
+                goToLabel: 'Register mock',
+                header: 'Registrate',
+              },
             },
-          },
-          login: {
-            header: 'Login',
           },
         },
       },
