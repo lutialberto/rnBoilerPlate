@@ -1,13 +1,5 @@
 import Toast from 'react-native-toast-message';
-
-export const TOAST_TYPES = {
-  error: 'error' as ToastType,
-  success: 'success' as ToastType,
-  info: 'info' as ToastType,
-  warning: 'warning' as ToastType,
-};
-
-export type ToastType = 'error' | 'success' | 'info' | 'warning';
+import {ToastType} from './Models';
 
 export const useToasts = () => {
   const showToast = (
