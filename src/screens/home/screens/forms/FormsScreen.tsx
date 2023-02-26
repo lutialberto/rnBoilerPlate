@@ -9,6 +9,7 @@ import PrimaryButton from '~/components/buttons/primaryButton/PrimaryButton';
 import BooleanInput from '~/components/forms/inputs/booleanInput/BooleanInput';
 import {useForm} from '~/hooks/forms/useForm';
 import SelectInput from '~/components/forms/inputs/selectInput/SelectInput';
+import CodeInput from '~/components/forms/inputs/codeInput/CodeInput';
 
 const translator = TRANSLATION_SCREENS.home.screens.forms;
 
@@ -82,6 +83,12 @@ const FormsScreen = () => {
           {label: 'dsakdlñwkqop', value: '3'},
         ]}
         enableSearchBar
+      />
+      <CodeInput
+        value={values.otpCode}
+        onChange={value => handleChange('otpCode', value)}
+        errorMessage={errors?.otpCode}
+        length={4}
       />
       <PrimaryButton onPress={handleSubmit} label={TRANSLATION_BUTTONS.save} />
     </AppScreenContainer>
