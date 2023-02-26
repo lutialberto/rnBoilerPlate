@@ -40,7 +40,6 @@ const FwkCodeInput = ({
         renderCell={({index, symbol, isFocused}) => (
           <FwkGenericText
             key={index}
-            // text={symbol || (isFocused ? <Cursor /> : null)}
             text={symbol}
             style={[cellStyle, isFocused && cellFocusStyle]}
             onLayout={getCellOnLayoutHandler(index)}
