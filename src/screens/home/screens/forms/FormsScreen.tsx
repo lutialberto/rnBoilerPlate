@@ -1,13 +1,13 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import React from 'react';
 import AppScreenContainer from '~/components/containers/screenContainer/AppScreenContainer';
 import GenericScreenHeader from '~/components/containers/genericScreenHeader/GenericScreenHeader';
 import {TRANSLATION_BUTTONS, TRANSLATION_SCREENS} from '~/constants/Translator';
 import GenericInput from '~/components/forms/inputs/genericInput/GenericInput';
-import {useForm} from '~/hooks/useForm';
 import {useFormScreenValidations} from './hooks/useFormScreenValidations';
 import PrimaryButton from '~/components/buttons/primaryButton/PrimaryButton';
 import BooleanInput from '~/components/forms/inputs/booleanInput/BooleanInput';
+import {useForm} from '~/hooks/forms/useForm';
 
 const translator = TRANSLATION_SCREENS.home.screens.forms;
 
@@ -34,7 +34,7 @@ const FormsScreen = () => {
       <GenericInput
         value={values.password}
         onChange={value => handleChange('password', value)}
-        errorMessage={errors.password}
+        errorMessage={errors?.password}
         label={translator.form.passwordLabel}
         placeholder={translator.form.passwordPlaceholder}
         type="password"
@@ -42,21 +42,21 @@ const FormsScreen = () => {
       <GenericInput
         value={values.firstName}
         onChange={value => handleChange('firstName', value)}
-        errorMessage={errors.firstName}
+        errorMessage={errors?.firstName}
         label={translator.form.firstNameLabel}
         placeholder={translator.form.firstNamePlaceholder}
       />
       <GenericInput
         value={values.lastName}
         onChange={value => handleChange('lastName', value)}
-        errorMessage={errors.lastName}
+        errorMessage={errors?.lastName}
         label={translator.form.lastNameLabel}
         placeholder={translator.form.lastNamePlaceholder}
       />
       <BooleanInput
         value={values.flag}
         onChange={value => handleChange('flag', value)}
-        errorMessage={errors.flag}
+        errorMessage={errors?.flag}
         label={translator.form.flagLabel}
       />
       <PrimaryButton onPress={handleSubmit} label={TRANSLATION_BUTTONS.save} />

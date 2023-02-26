@@ -1,30 +1,30 @@
 import {TRANSLATION_VALIDATIONS} from '~/constants/Translator';
-import {useValidations} from '~/hooks/useValidations';
+import {useValidations} from '~/hooks/validations/useValidations';
 import {AppFormInputs} from '../models/AppFormInputs';
 
 export const useFormScreenValidations = () => {
   const {
-    singleValidations: {isEmpty},
-    isOtpNumberOk,
-    isPasswordOk,
+    singleValidations: {IsEmpty},
+    IsOtpNumberOk,
+    IsPasswordOk,
   } = useValidations();
 
   const validateForm = (values: AppFormInputs) => {
     const {password, otpCode, firstName, lastName, flag, selectedOption} = values;
 
     let errorsFound: any = {};
-    const passwordWithErrors = isPasswordOk(password);
+    const passwordWithErrors = IsPasswordOk(password);
     if (passwordWithErrors) errorsFound.password = passwordWithErrors;
 
-    if (isEmpty(firstName)) errorsFound.firstName = TRANSLATION_VALIDATIONS.required;
+    if (IsEmpty(firstName)) errorsFound.firstName = TRANSLATION_VALIDATIONS.required;
 
-    if (isEmpty(lastName)) errorsFound.lastName = TRANSLATION_VALIDATIONS.required;
+    if (IsEmpty(lastName)) errorsFound.lastName = TRANSLATION_VALIDATIONS.required;
 
     if (!flag) errorsFound.flag = TRANSLATION_VALIDATIONS.required;
 
-    if (isEmpty(selectedOption)) errorsFound.selectedOption = TRANSLATION_VALIDATIONS.required;
+    if (IsEmpty(selectedOption)) errorsFound.selectedOption = TRANSLATION_VALIDATIONS.required;
 
-    const otpWithErrors = isOtpNumberOk(otpCode, 4);
+    const otpWithErrors = IsOtpNumberOk(otpCode, 4);
     if (otpWithErrors) errorsFound.otpCode = otpWithErrors;
 
     return errorsFound;
