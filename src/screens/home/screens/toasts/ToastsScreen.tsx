@@ -4,7 +4,8 @@ import AppScreenContainer from '~/components/containers/screenContainer/AppScree
 import PrimaryButton from '~/components/buttons/primaryButton/PrimaryButton';
 import GenericScreenHeader from '~/components/containers/genericScreenHeader/GenericScreenHeader';
 import {TRANSLATION_SCREENS} from '~/constants/Translator';
-import {TOAST_TYPES, useToasts} from '~/hooks/toasts/useToasts';
+import {useToasts} from '~/hooks/toasts/useToasts';
+import {TOAST_TYPES} from '~/hooks/toasts/Models';
 
 const translator = TRANSLATION_SCREENS.home.screens.toasts;
 
