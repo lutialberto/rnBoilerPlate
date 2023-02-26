@@ -85,7 +85,6 @@ export const TRANSLATOR = {
           modals: 'Tipos de modales',
           toasts: 'Tipos de tostadas',
           forms: 'Tipos de formularios',
-          login: 'Login mock',
         },
         screens: {
           buttons: {
@@ -149,6 +148,9 @@ export const TRANSLATOR = {
               optionsLabel: 'Opciones',
               optionsWithSearchLabel: 'Tiene buscador',
               flagLabel: 'Booleano',
+            },
+            forms: {
+              login: 'Login mock',
             },
           },
           login: {

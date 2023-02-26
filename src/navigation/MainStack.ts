@@ -9,7 +9,7 @@ export type MainStackParamList = {
   Toasts: undefined;
   Forms: undefined;
 
-  'Home/Login': undefined;
+  'Forms/Login': undefined;
 };
 
 export type MainScreenNavigationType = NativeStackNavigationProp<MainStackParamList>;

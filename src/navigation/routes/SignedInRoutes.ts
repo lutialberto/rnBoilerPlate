@@ -6,6 +6,6 @@ export const ROUTE_MODALS = 'Modals';
 export const ROUTE_TOASTS = 'Toasts';
 export const ROUTE_FORMS = 'Forms';
 
-export const ROUTE_HOME_LOGIN = 'Home/Login';
+export const ROUTE_FORMS_LOGIN = 'Forms/Login';
 
 export const ROUTE_SIGNED_IN_DEFAULT = ROUTE_HOME;
