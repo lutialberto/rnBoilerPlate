@@ -17,6 +17,7 @@ export const TRANSLATOR = {
         share: 'Compartir',
         send: 'Enviar',
         resend: 'Reenviar',
+        enter: 'Ingresar',
       },
       inputs: {
         selector: 'Selecione...',
@@ -66,6 +67,14 @@ export const TRANSLATOR = {
           text2: 'fue copiado al portapapeles!',
         },
       },
+      forms: {
+        login: {
+          emailLabel: 'Mail',
+          emailPlaceholder: 'Ingresa tu mail',
+          passwordLabel: 'Contraseña',
+          passwordPlaceholder: 'Ingresa tu contraseña',
+        },
+      },
     },
     screens: {
       home: {
@@ -76,6 +85,7 @@ export const TRANSLATOR = {
           modals: 'Tipos de modales',
           toasts: 'Tipos de tostadas',
           forms: 'Tipos de formularios',
+          login: 'Login mock',
         },
         screens: {
           buttons: {
@@ -140,6 +150,9 @@ export const TRANSLATOR = {
               optionsWithSearchLabel: 'Tiene buscador',
               flagLabel: 'Booleano',
             },
+          },
+          login: {
+            header: 'Login',
           },
         },
       },
