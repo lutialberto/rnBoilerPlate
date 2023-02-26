@@ -10,7 +10,8 @@ export const useFormScreenValidations = () => {
   } = useValidations();
 
   const validateForm = (values: AppFormInputs) => {
-    const {password, otpCode, firstName, lastName, flag, selectedOption} = values;
+    const {password, otpCode, firstName, lastName, flag, selectedOption, optionsWithSearch} =
+      values;
 
     let errorsFound: any = {};
     const passwordWithErrors = IsPasswordOk(password);
@@ -23,6 +24,9 @@ export const useFormScreenValidations = () => {
     if (!flag) errorsFound.flag = TRANSLATION_VALIDATIONS.required;
 
     if (IsEmpty(selectedOption)) errorsFound.selectedOption = TRANSLATION_VALIDATIONS.required;
+
+    if (IsEmpty(optionsWithSearch))
+      errorsFound.optionsWithSearch = TRANSLATION_VALIDATIONS.required;
 
     const otpWithErrors = IsOtpNumberOk(otpCode, 4);
     if (otpWithErrors) errorsFound.otpCode = otpWithErrors;

@@ -8,6 +8,7 @@ import {useFormScreenValidations} from './hooks/useFormScreenValidations';
 import PrimaryButton from '~/components/buttons/primaryButton/PrimaryButton';
 import BooleanInput from '~/components/forms/inputs/booleanInput/BooleanInput';
 import {useForm} from '~/hooks/forms/useForm';
+import SelectInput from '~/components/forms/inputs/selectInput/SelectInput';
 
 const translator = TRANSLATION_SCREENS.home.screens.forms;
 
@@ -58,6 +59,29 @@ const FormsScreen = () => {
         onChange={value => handleChange('flag', value)}
         errorMessage={errors?.flag}
         label={translator.form.flagLabel}
+      />
+      <SelectInput
+        value={values.selectedOption}
+        onChange={value => handleChange('selectedOption', value)}
+        errorMessage={errors?.selectedOption}
+        label={translator.form.optionsLabel}
+        options={[
+          {label: '1', value: '1'},
+          {label: '2', value: '2'},
+          {label: '3', value: '3'},
+        ]}
+      />
+      <SelectInput
+        value={values.optionsWithSearch}
+        onChange={value => handleChange('optionsWithSearch', value)}
+        errorMessage={errors?.optionsWithSearch}
+        label={translator.form.optionsWithSearchLabel}
+        options={[
+          {label: 'dsadsadsa', value: '1'},
+          {label: 'sdsadmsaldsam', value: '2'},
+          {label: 'dsakdlñwkqop', value: '3'},
+        ]}
+        enableSearchBar
       />
       <PrimaryButton onPress={handleSubmit} label={TRANSLATION_BUTTONS.save} />
     </AppScreenContainer>

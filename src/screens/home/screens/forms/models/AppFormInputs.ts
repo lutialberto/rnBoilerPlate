@@ -3,6 +3,7 @@ export interface AppFormInputs {
   lastName: string;
   flag: boolean;
   selectedOption: string;
+  optionsWithSearch: string;
   password: string;
   otpCode: string;
 }
