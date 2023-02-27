@@ -168,6 +168,10 @@ export const TRANSLATOR = {
                 goToLabel: 'Cambio contraseña mock',
                 header: 'Cambio contraseña',
               },
+              otpCodeValidation: {
+                goToLabel: 'Validación Otp mock',
+                header: 'Confirmación Otp',
+              },
             },
           },
         },

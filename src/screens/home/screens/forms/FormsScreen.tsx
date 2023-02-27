@@ -12,6 +12,7 @@ import CodeInput from '~/components/forms/inputs/codeInput/CodeInput';
 import {
   ROUTE_FORMS_CHANGE_PASSWORD,
   ROUTE_FORMS_LOGIN,
+  ROUTE_FORMS_OTP_CODE_VALIDATION,
   ROUTE_FORMS_REGISTER,
 } from '~/navigation/routes/SignedInRoutes';
 import {useNavigation} from '@react-navigation/native';
@@ -113,6 +114,11 @@ const FormsScreen = () => {
         <PrimaryButton
           onPress={() => navigator.navigate(ROUTE_FORMS_CHANGE_PASSWORD)}
           label={translator.forms.changePassword.goToLabel}
+          containerStyle={styles.button}
+        />
+        <PrimaryButton
+          onPress={() => navigator.navigate(ROUTE_FORMS_OTP_CODE_VALIDATION)}
+          label={translator.forms.otpCodeValidation.goToLabel}
           containerStyle={styles.button}
         />
       </ScrollView>

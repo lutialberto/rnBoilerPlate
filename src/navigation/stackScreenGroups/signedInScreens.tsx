@@ -13,6 +13,7 @@ import {
   ROUTE_TOASTS,
   ROUTE_FORMS_REGISTER,
   ROUTE_FORMS_CHANGE_PASSWORD,
+  ROUTE_FORMS_OTP_CODE_VALIDATION,
 } from '../routes/SignedInRoutes';
 import ButtonsScreen from '~/screens/home/screens/buttons/ButtonsScreen';
 import TextsScreen from '~/screens/home/screens/texts/TextsScreen';
@@ -23,6 +24,7 @@ import FormsScreen from '~/screens/home/screens/forms/FormsScreen';
 import LoginScreen from '~/screens/home/screens/forms/screens/login/LoginScreen';
 import RegisterScreen from '~/screens/home/screens/forms/screens/register/RegisterScreen';
 import ChangePasswordScreen from '~/screens/home/screens/forms/screens/changePassword/ChangePasswordScreen';
+import OtpCodeValidationScreen from '~/screens/home/screens/forms/screens/otpCodeValidation/OtpCodeValidationScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -39,6 +41,7 @@ const signedInScreens = () => (
     <Stack.Screen name={ROUTE_FORMS_LOGIN} component={LoginScreen} />
     <Stack.Screen name={ROUTE_FORMS_REGISTER} component={RegisterScreen} />
     <Stack.Screen name={ROUTE_FORMS_CHANGE_PASSWORD} component={ChangePasswordScreen} />
+    <Stack.Screen name={ROUTE_FORMS_OTP_CODE_VALIDATION} component={OtpCodeValidationScreen} />
   </>
 );
 

@@ -9,5 +9,6 @@ export const ROUTE_FORMS = 'Forms';
 export const ROUTE_FORMS_LOGIN = 'Forms/Login';
 export const ROUTE_FORMS_REGISTER = 'Forms/Register';
 export const ROUTE_FORMS_CHANGE_PASSWORD = 'Forms/ChangePassword';
+export const ROUTE_FORMS_OTP_CODE_VALIDATION = 'Forms/OtpCodeValidation';
 
 export const ROUTE_SIGNED_IN_DEFAULT = ROUTE_HOME;
