@@ -58,6 +58,7 @@ export const TRANSLATOR = {
         emailInvalid: 'No es un formato válido de mail',
         minLength: 'Debe tener un mínimo de {min} caracteres',
         maxLength: 'Debe tener un máximo de {max} caracteres',
+        passwordNotConfirmed: 'Contraseña y confirmar contraseña no son iguales',
       },
       toasts: {
         goToStore: {
@@ -68,12 +69,12 @@ export const TRANSLATOR = {
         },
       },
       forms: {
-        login: {
-          emailLabel: 'Mail',
-          emailPlaceholder: 'Ingresa tu mail',
-          passwordLabel: 'Contraseña',
-          passwordPlaceholder: 'Ingresa tu contraseña',
-        },
+        emailLabel: 'Mail',
+        emailPlaceholder: 'Ingresa tu mail',
+        passwordLabel: 'Contraseña',
+        passwordPlaceholder: 'Ingresa tu contraseña',
+        passwordConfirmLabel: 'Confirmar Contraseña',
+        passwordConfirmPlaceholder: 'Ingresa tu contraseña nuevamente',
       },
     },
     screens: {
@@ -85,7 +86,6 @@ export const TRANSLATOR = {
           modals: 'Tipos de modales',
           toasts: 'Tipos de tostadas',
           forms: 'Tipos de formularios',
-          login: 'Login mock',
         },
         screens: {
           buttons: {
@@ -150,9 +150,29 @@ export const TRANSLATOR = {
               optionsWithSearchLabel: 'Tiene buscador',
               flagLabel: 'Booleano',
             },
-          },
-          login: {
-            header: 'Login',
+            forms: {
+              login: {
+                goToLabel: 'Login mock',
+                header: 'Login',
+              },
+              register: {
+                goToLabel: 'Register mock',
+                header: 'Registración',
+                form: {
+                  fullNameLabel: 'Nombre completo',
+                  fullNamePlaceholder: 'Ingresá tu nombre completo',
+                  submit: 'Registrarse',
+                },
+              },
+              changePassword: {
+                goToLabel: 'Cambio contraseña mock',
+                header: 'Cambio contraseña',
+              },
+              otpCodeValidation: {
+                goToLabel: 'Validación Otp mock',
+                header: 'Confirmación Otp',
+              },
+            },
           },
         },
       },
