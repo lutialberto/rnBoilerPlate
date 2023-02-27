@@ -164,6 +164,10 @@ export const TRANSLATOR = {
                   submit: 'Registrarse',
                 },
               },
+              changePassword: {
+                goToLabel: 'Cambio contraseña mock',
+                header: 'Cambio contraseña',
+              },
             },
           },
         },

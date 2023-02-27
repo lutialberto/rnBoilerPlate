@@ -9,7 +9,11 @@ import BooleanInput from '~/components/forms/inputs/booleanInput/BooleanInput';
 import {useForm} from '~/hooks/forms/useForm';
 import SelectInput from '~/components/forms/inputs/selectInput/SelectInput';
 import CodeInput from '~/components/forms/inputs/codeInput/CodeInput';
-import {ROUTE_FORMS_LOGIN, ROUTE_FORMS_REGISTER} from '~/navigation/routes/SignedInRoutes';
+import {
+  ROUTE_FORMS_CHANGE_PASSWORD,
+  ROUTE_FORMS_LOGIN,
+  ROUTE_FORMS_REGISTER,
+} from '~/navigation/routes/SignedInRoutes';
 import {useNavigation} from '@react-navigation/native';
 import {MainScreenNavigationType} from '~/navigation/MainStack';
 import {ScrollView, StyleSheet, View} from 'react-native';
@@ -104,6 +108,11 @@ const FormsScreen = () => {
         <PrimaryButton
           onPress={() => navigator.navigate(ROUTE_FORMS_REGISTER)}
           label={translator.forms.register.goToLabel}
+          containerStyle={styles.button}
+        />
+        <PrimaryButton
+          onPress={() => navigator.navigate(ROUTE_FORMS_CHANGE_PASSWORD)}
+          label={translator.forms.changePassword.goToLabel}
           containerStyle={styles.button}
         />
       </ScrollView>
