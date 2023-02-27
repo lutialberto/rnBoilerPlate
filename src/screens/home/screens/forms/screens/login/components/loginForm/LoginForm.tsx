@@ -6,7 +6,7 @@ import {useLoginValidations} from '../../hooks/useLoginValidations';
 import PrimaryButton from '~/components/buttons/primaryButton/PrimaryButton';
 import {ILoginFormProps} from './ILoginFormProps';
 
-const translator = TRANSLATOR.components.forms.login;
+const translator = TRANSLATOR.components.forms;
 
 const LoginForm = ({onError, onSuccess}: ILoginFormProps) => {
   const {validateForm} = useLoginValidations();
@@ -26,8 +26,8 @@ const LoginForm = ({onError, onSuccess}: ILoginFormProps) => {
         value={values.email}
         onChange={value => handleChange('email', value)}
         errorMessage={errors?.email}
-        label={translator.passwordLabel}
-        placeholder={translator.passwordPlaceholder}
+        label={translator.emailLabel}
+        placeholder={translator.emailPlaceholder}
       />
       <GenericInput
         value={values.password}

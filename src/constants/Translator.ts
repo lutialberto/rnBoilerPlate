@@ -58,6 +58,7 @@ export const TRANSLATOR = {
         emailInvalid: 'No es un formato válido de mail',
         minLength: 'Debe tener un mínimo de {min} caracteres',
         maxLength: 'Debe tener un máximo de {max} caracteres',
+        passwordNotConfirmed: 'Contraseña y confirmar contraseña no son iguales',
       },
       toasts: {
         goToStore: {
@@ -68,12 +69,12 @@ export const TRANSLATOR = {
         },
       },
       forms: {
-        login: {
-          emailLabel: 'Mail',
-          emailPlaceholder: 'Ingresa tu mail',
-          passwordLabel: 'Contraseña',
-          passwordPlaceholder: 'Ingresa tu contraseña',
-        },
+        emailLabel: 'Mail',
+        emailPlaceholder: 'Ingresa tu mail',
+        passwordLabel: 'Contraseña',
+        passwordPlaceholder: 'Ingresa tu contraseña',
+        passwordConfirmLabel: 'Confirmar Contraseña',
+        passwordConfirmPlaceholder: 'Ingresa tu contraseña nuevamente',
       },
     },
     screens: {
@@ -156,7 +157,12 @@ export const TRANSLATOR = {
               },
               register: {
                 goToLabel: 'Register mock',
-                header: 'Registrate',
+                header: 'Registración',
+                form: {
+                  fullNameLabel: 'Nombre completo',
+                  fullNamePlaceholder: 'Ingresá tu nombre completo',
+                  submit: 'Registrarse',
+                },
               },
             },
           },

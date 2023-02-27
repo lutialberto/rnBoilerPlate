@@ -10,6 +10,7 @@ export type MainStackParamList = {
   Forms: undefined;
 
   'Forms/Login': undefined;
+  'Forms/Register': undefined;
 };
 
 export type MainScreenNavigationType = NativeStackNavigationProp<MainStackParamList>;

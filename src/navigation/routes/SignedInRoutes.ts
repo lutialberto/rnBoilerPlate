@@ -7,5 +7,6 @@ export const ROUTE_TOASTS = 'Toasts';
 export const ROUTE_FORMS = 'Forms';
 
 export const ROUTE_FORMS_LOGIN = 'Forms/Login';
+export const ROUTE_FORMS_REGISTER = 'Forms/Register';
 
 export const ROUTE_SIGNED_IN_DEFAULT = ROUTE_HOME;
