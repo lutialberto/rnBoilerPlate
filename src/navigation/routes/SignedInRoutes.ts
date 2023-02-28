@@ -4,9 +4,10 @@ export const ROUTE_TEXTS = 'Texts';
 export const ROUTE_LOADING = 'Loading';
 export const ROUTE_MODALS = 'Modals';
 export const ROUTE_TOASTS = 'Toasts';
-export const ROUTE_FORMS = 'Forms';
+export const ROUTE_USER_PREFERENCES = 'UserPreferences';
 export const ROUTE_ABOUT = 'About';
 
+export const ROUTE_FORMS = 'Forms';
 export const ROUTE_FORMS_LOGIN = 'Forms/Login';
 export const ROUTE_FORMS_REGISTER = 'Forms/Register';
 export const ROUTE_FORMS_CHANGE_PASSWORD = 'Forms/ChangePassword';

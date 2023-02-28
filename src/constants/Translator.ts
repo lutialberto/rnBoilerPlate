@@ -87,6 +87,7 @@ export const TRANSLATOR = {
           toasts: 'Tipos de tostadas',
           forms: 'Tipos de formularios',
           about: 'Acerca de la app',
+          userPreferences: 'Preferencias de usuario',
         },
         screens: {
           buttons: {
@@ -182,6 +183,10 @@ export const TRANSLATOR = {
             build: 'Build',
             latestVersion: 'Última versión en la tienda',
             minimumVersion: 'Mínima versión requerida',
+          },
+          userPreferences: {
+            header: 'Preferencias de usuario',
+            themeLabel: 'Theme',
           },
         },
       },

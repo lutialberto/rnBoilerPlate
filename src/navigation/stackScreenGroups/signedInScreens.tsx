@@ -15,6 +15,7 @@ import {
   ROUTE_FORMS_CHANGE_PASSWORD,
   ROUTE_FORMS_OTP_CODE_VALIDATION,
   ROUTE_ABOUT,
+  ROUTE_USER_PREFERENCES,
 } from '../routes/SignedInRoutes';
 import ButtonsScreen from '~/screens/home/screens/buttons/ButtonsScreen';
 import TextsScreen from '~/screens/home/screens/texts/TextsScreen';
@@ -27,6 +28,7 @@ import RegisterScreen from '~/screens/home/screens/forms/screens/register/Regist
 import ChangePasswordScreen from '~/screens/home/screens/forms/screens/changePassword/ChangePasswordScreen';
 import OtpCodeValidationScreen from '~/screens/home/screens/forms/screens/otpCodeValidation/OtpCodeValidationScreen';
 import AboutScreen from '~/screens/home/screens/about/AboutScreen';
+import UserPreferencesScreen from '~/screens/home/screens/userPreferences/UserPreferencesScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -39,6 +41,7 @@ const signedInScreens = () => (
     <Stack.Screen name={ROUTE_MODALS} component={ModalsScreen} />
     <Stack.Screen name={ROUTE_TOASTS} component={ToastsScreen} />
     <Stack.Screen name={ROUTE_ABOUT} component={AboutScreen} />
+    <Stack.Screen name={ROUTE_USER_PREFERENCES} component={UserPreferencesScreen} />
 
     <Stack.Screen name={ROUTE_FORMS} component={FormsScreen} />
     <Stack.Screen name={ROUTE_FORMS_LOGIN} component={LoginScreen} />
