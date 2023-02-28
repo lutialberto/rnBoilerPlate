@@ -5,6 +5,7 @@ export const ROUTE_LOADING = 'Loading';
 export const ROUTE_MODALS = 'Modals';
 export const ROUTE_TOASTS = 'Toasts';
 export const ROUTE_FORMS = 'Forms';
+export const ROUTE_ABOUT = 'About';
 
 export const ROUTE_FORMS_LOGIN = 'Forms/Login';
 export const ROUTE_FORMS_REGISTER = 'Forms/Register';

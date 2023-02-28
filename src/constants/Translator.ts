@@ -86,6 +86,7 @@ export const TRANSLATOR = {
           modals: 'Tipos de modales',
           toasts: 'Tipos de tostadas',
           forms: 'Tipos de formularios',
+          about: 'Acerca de la app',
         },
         screens: {
           buttons: {
@@ -173,6 +174,14 @@ export const TRANSLATOR = {
                 header: 'Confirmación Otp',
               },
             },
+          },
+          about: {
+            header: 'Acerca de la App',
+            environment: 'Ambiente',
+            version: 'Version',
+            build: 'Build',
+            latestVersion: 'Última versión en la tienda',
+            minimumVersion: 'Mínima versión requerida',
           },
         },
       },

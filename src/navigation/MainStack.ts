@@ -7,6 +7,7 @@ export type MainStackParamList = {
   Loading: undefined;
   Modals: undefined;
   Toasts: undefined;
+  About: undefined;
   Forms: undefined;
 
   'Forms/Login': undefined;
