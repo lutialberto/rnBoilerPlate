@@ -86,6 +86,7 @@ export const TRANSLATOR = {
           modals: 'Tipos de modales',
           toasts: 'Tipos de tostadas',
           forms: 'Tipos de formularios',
+          userPreferences: 'Preferencias de usuario',
         },
         screens: {
           buttons: {
@@ -173,6 +174,10 @@ export const TRANSLATOR = {
                 header: 'Confirmación Otp',
               },
             },
+          },
+          userPreferences: {
+            header: 'Preferencias de usuario',
+            themeLabel: 'Theme',
           },
         },
       },
