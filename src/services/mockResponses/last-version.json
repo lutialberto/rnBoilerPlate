@@ -1,0 +1,14 @@
+{
+  "latestVersion": {
+    "name": "1.1.1",
+    "major": 1,
+    "minor": 1,
+    "patch": 1
+  },
+  "minimumVersion": {
+    "name": "1.1.0",
+    "major": 1,
+    "minor": 1,
+    "patch": 0
+  }
+}

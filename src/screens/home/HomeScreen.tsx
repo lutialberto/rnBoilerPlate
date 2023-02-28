@@ -6,6 +6,7 @@ import AppScreenContainer from '~/components/containers/screenContainer/AppScree
 import {useNavigation} from '@react-navigation/native';
 import {MainScreenNavigationType} from '~/navigation/MainStack';
 import {
+  ROUTE_ABOUT,
   ROUTE_BUTTONS,
   ROUTE_FORMS,
   ROUTE_LOADING,
@@ -44,6 +45,10 @@ const HomeScreen = () => {
     {
       label: translator.buttons.forms,
       onPress: () => navigator.navigate(ROUTE_FORMS),
+    },
+    {
+      label: translator.buttons.about,
+      onPress: () => navigator.navigate(ROUTE_ABOUT),
     },
     {
       label: translator.buttons.userPreferences,
