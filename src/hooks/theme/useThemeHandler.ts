@@ -3,6 +3,7 @@ import {createJSONStorage, persist} from 'zustand/middleware';
 import EncryptedStorage from 'react-native-encrypted-storage';
 import {ColorProps} from './Models';
 import {NONE_THEME_PROPS, THEMES_PROPS} from './Contants';
+import {STORAGE_KEY_PREFIX} from '~/constants/State';
 
 export type ITheme = 'light' | 'dark';
 
@@ -27,7 +28,7 @@ export const useThemeHandler = create<IThemeState>()(
       changeTheme: (newTheme: ITheme) => set(() => ({selectedTheme: newTheme})),
     }),
     {
-      name: 'theme-storage',
+      name: STORAGE_KEY_PREFIX + '-theme-storage',
       storage: createJSONStorage(() => EncryptedStorage),
       version: 1,
     },
