@@ -6,6 +6,7 @@ export const ROUTE_MODALS = 'Modals';
 export const ROUTE_TOASTS = 'Toasts';
 export const ROUTE_USER_PREFERENCES = 'UserPreferences';
 export const ROUTE_ABOUT = 'About';
+export const ROUTE_LISTS = 'Lists';
 
 export const ROUTE_FORMS = 'Forms';
 export const ROUTE_FORMS_LOGIN = 'Forms/Login';
