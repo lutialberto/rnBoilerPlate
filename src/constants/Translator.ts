@@ -88,6 +88,7 @@ export const TRANSLATOR = {
           forms: 'Tipos de formularios',
           about: 'Acerca de la app',
           userPreferences: 'Preferencias de usuario',
+          lists: 'Tipos de listas',
         },
         screens: {
           buttons: {
@@ -187,6 +188,31 @@ export const TRANSLATOR = {
           userPreferences: {
             header: 'Preferencias de usuario',
             themeLabel: 'Theme',
+          },
+          lists: {
+            header: 'Listas',
+            actionBar: {
+              pullDown: 'Refresh manual',
+              empty: 'Lista vacía',
+              fetchMore: 'Fetch manual',
+              search: 'Busqueda local',
+            },
+            emptyList: {
+              header: 'Lista sin datos',
+              message: 'No hay datos',
+            },
+            fetchMoreList: {
+              header: 'Obtiene nueva página manualmente',
+              fetchMore: 'Expandir',
+            },
+            searchList: {
+              header:
+                'Escribe en el campo de arriba para realizar una búsqueda y filtrar sobre la lista inferior',
+            },
+            pullDownList: {
+              header:
+                'Continua scrolleando hacia arriba cuando llegas al tope para refrescar lista (revierte la lista)',
+            },
           },
         },
       },

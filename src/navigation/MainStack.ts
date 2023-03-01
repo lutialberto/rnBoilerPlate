@@ -9,6 +9,7 @@ export type MainStackParamList = {
   Toasts: undefined;
   About: undefined;
   UserPreferences: undefined;
+  Lists: undefined;
 
   Forms: undefined;
   'Forms/Login': undefined;

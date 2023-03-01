@@ -9,6 +9,7 @@ import {
   ROUTE_ABOUT,
   ROUTE_BUTTONS,
   ROUTE_FORMS,
+  ROUTE_LISTS,
   ROUTE_LOADING,
   ROUTE_MODALS,
   ROUTE_TEXTS,
@@ -53,6 +54,10 @@ const HomeScreen = () => {
     {
       label: translator.buttons.userPreferences,
       onPress: () => navigator.navigate(ROUTE_USER_PREFERENCES),
+    },
+    {
+      label: translator.buttons.lists,
+      onPress: () => navigator.navigate(ROUTE_LISTS),
     },
   ];
 
