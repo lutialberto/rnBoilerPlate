@@ -12,11 +12,16 @@ const LoginScreen = () => {
   const onSuccess = (values: LoginFormInputs) => console.log('success', {values});
   const onError = (values: LoginFormInputs, errors: IFormErrors<LoginFormInputs>) =>
     console.log('error', {values, errors});
+  const handlePasswordRecovery = () => console.log('password recovery');
 
   return (
     <AppScreenContainer>
       <GenericScreenHeader title={translator.header} />
-      <LoginForm onSuccess={onSuccess} onError={onError} />
+      <LoginForm
+        onSuccess={onSuccess}
+        onError={onError}
+        handlePasswordRecovery={handlePasswordRecovery}
+      />
     </AppScreenContainer>
   );
 };

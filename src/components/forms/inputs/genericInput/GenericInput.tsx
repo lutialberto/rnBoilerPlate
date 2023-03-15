@@ -36,6 +36,7 @@ const GenericInput = ({
           }}
         />
       }
+      errorMessage={errorMessage}
       errorMessageComponent={
         props.errorMessageComponent ?? (
           <PrimaryText text={errorMessage} style={props.errorMessageStyle} variant="errorMessage" />
