@@ -60,7 +60,8 @@ const FwkGenericInput = ({
           </TouchableOpacity>
         )}
       </View>
-      {errorMessageComponent ?? <FwkGenericText style={errorMessageStyle} text={errorMessage} />}
+      {errorMessage &&
+        (errorMessageComponent ?? <FwkGenericText style={errorMessageStyle} text={errorMessage} />)}
     </View>
   );
 };

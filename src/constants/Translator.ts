@@ -18,6 +18,7 @@ export const TRANSLATOR = {
         send: 'Enviar',
         resend: 'Reenviar',
         enter: 'Ingresar',
+        register: 'Registrarse',
       },
       inputs: {
         selector: 'Selecione...',
@@ -69,6 +70,7 @@ export const TRANSLATOR = {
         },
       },
       forms: {
+        passwordRecovery: 'Recuperar contraseña',
         emailLabel: 'Mail',
         emailPlaceholder: 'Ingresa tu mail',
         passwordLabel: 'Contraseña',
@@ -78,6 +80,22 @@ export const TRANSLATOR = {
       },
     },
     screens: {
+      welcome: {
+        title: 'Bienvenido!',
+        buttons: {
+          login: 'Ingresar',
+          register: 'Crear cuenta',
+        },
+        screens: {
+          login: {
+            title: 'Login',
+            message: 'Escribí tu mail y contraseña para ingresar a la app',
+            passwordRecoveryMessage: 'Recuperar contraseña',
+          },
+          register: {},
+          passwordRecovery: {},
+        },
+      },
       home: {
         buttons: {
           buttons: 'Tipos de botones',

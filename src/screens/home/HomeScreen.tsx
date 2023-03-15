@@ -16,6 +16,8 @@ import {
   ROUTE_TOASTS,
   ROUTE_USER_PREFERENCES,
 } from '~/navigation/routes/SignedInRoutes';
+import GenericScreenHeader from '~/components/containers/genericScreenHeader/GenericScreenHeader';
+import Logout from './components/logout/Logout';
 
 const translator = TRANSLATION_SCREENS.home;
 
@@ -63,14 +65,17 @@ const HomeScreen = () => {
 
   return (
     <AppScreenContainer style={styles.container}>
-      {buttons.map(button => (
-        <PrimaryButton
-          key={button.label}
-          label={button.label}
-          onPress={button.onPress}
-          containerStyle={styles.button}
-        />
-      ))}
+      <>
+        {buttons.map(button => (
+          <PrimaryButton
+            key={button.label}
+            label={button.label}
+            onPress={button.onPress}
+            containerStyle={styles.button}
+          />
+        ))}
+        <Logout />
+      </>
     </AppScreenContainer>
   );
 };
