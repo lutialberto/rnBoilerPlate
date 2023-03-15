@@ -9,13 +9,18 @@ import {useNavigation} from '@react-navigation/native';
 import {MainScreenNavigationType} from '~/navigation/MainStack';
 import {ROUTE_PASSWORD_RECOVERY, ROUTE_REGISTER} from '~/navigation/routes/NotSignedInRoutes';
 import GenericScreenHeader from '~/components/containers/genericScreenHeader/GenericScreenHeader';
+import {useSessionState} from '~/hooks/sessionState/useSessionState';
+import {LoginFormInputs} from '~/screens/home/screens/forms/screens/login/models/LoginFormInputs';
 
 const translator = TRANSLATION_SCREENS.welcome.screens.login;
 
 const LoginScreen = () => {
   const navigator = useNavigation<MainScreenNavigationType>();
+  const {login} = useSessionState();
 
-  const onSuccess = () => {};
+  const onSuccess = (inputs: LoginFormInputs) => {
+    login(inputs.email);
+  };
   const onError = () => {};
 
   const goToRegister = () => {
