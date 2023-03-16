@@ -1,4 +1,5 @@
 import React from 'react';
+import {StyleSheet} from 'react-native';
 import {IFormProps} from '~/models/IFormProps';
 import {ChangePasswordFormInputs} from '../../models/ChangePasswordFormInputs';
 import PrimaryButton from '~/components/buttons/primaryButton/PrimaryButton';
@@ -40,9 +41,19 @@ const ChangePasswordForm = ({onError, onSuccess}: IFormProps<ChangePasswordFormI
         placeholder={translatorForm.passwordConfirmPlaceholder}
         type="password"
       />
-      <PrimaryButton onPress={handleSubmit} label={translator.confirm} />
+      <PrimaryButton
+        onPress={handleSubmit}
+        label={translator.confirm}
+        containerStyle={styles.button}
+      />
     </>
   );
 };
 
 export default ChangePasswordForm;
+
+const styles = StyleSheet.create({
+  button: {
+    marginTop: 15,
+  },
+});

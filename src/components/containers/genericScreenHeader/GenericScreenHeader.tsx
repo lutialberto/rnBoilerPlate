@@ -48,6 +48,5 @@ const styles = StyleSheet.create({
   },
   actionsContainer: {
     flex: 1,
-    borderWidth: 1,
   },
 });

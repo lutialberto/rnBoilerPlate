@@ -93,7 +93,29 @@ export const TRANSLATOR = {
             passwordRecoveryMessage: 'Recuperar contraseña',
           },
           register: {},
-          passwordRecovery: {},
+          passwordRecovery: {
+            screens: {
+              sendEmail: {
+                header: 'Recuperar contraseña',
+                message:
+                  'Antes de recuperar la contraseña, debemos validar tu identidad. Por favor, ingresa el mail de tu cuenta.',
+              },
+              emailVerification: {
+                header: 'Recuperar contraseña',
+                message:
+                  'Hemos enviado un código de verificación al mail {{email}}. Revisa la casilla de correo y agregalo a continuación.',
+                toast: {
+                  title: 'Código incorrecto',
+                  message: 'Ingresa 1234 para continuar con el proceso',
+                },
+              },
+              changePassword: {
+                header: 'Cambiar contraseña',
+                message:
+                  'Ingresa una nueva contraseña que cumpla con los siguientes requisitos:\n- Posea al menos una letra minúscula.\n- Posea al menos una letra mayúscula.\n- Posea al menos un caracter especial.\n Posea al menos 8 caracteres.',
+              },
+            },
+          },
         },
       },
       home: {
