@@ -92,7 +92,39 @@ export const TRANSLATOR = {
             message: 'Escribí tu mail y contraseña para ingresar a la app',
             passwordRecoveryMessage: 'Recuperar contraseña',
           },
-          register: {},
+          register: {
+            screens: {
+              sendEmail: {
+                header: 'Registración',
+                message: 'Por favor, ingresa el mail de tu nueva cuenta.',
+              },
+              emailVerification: {
+                header: 'Verificación de mail',
+                message:
+                  'Hemos enviado un código de verificación al mail {{email}}. Revisa la casilla de correo y agregalo a continuación.',
+                toast: {
+                  title: 'Código incorrecto',
+                  message: 'Ingresa 1234 para continuar con el proceso',
+                },
+              },
+              createPassword: {
+                header: 'Contraseña',
+                message:
+                  'Ingresa una contraseña que cumpla con los siguientes requisitos:\n- Posea al menos una letra minúscula.\n- Posea al menos una letra mayúscula.\n- Posea al menos un caracter especial.\n Posea al menos 8 caracteres.',
+              },
+              personalData: {
+                header: 'Datos personales',
+                message: 'Completa el formulario con tus datos personales',
+                form: {
+                  fullNameLabel: 'Nombre completo',
+                  fullNamePlaceholder: 'Ingresa nombre completo',
+                  addressLabel: 'Dirección',
+                  addressPlaceholder: 'Ingresa dirección',
+                  genderLabel: 'Género',
+                },
+              },
+            },
+          },
           passwordRecovery: {
             screens: {
               sendEmail: {
