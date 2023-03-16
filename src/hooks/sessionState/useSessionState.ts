@@ -9,14 +9,14 @@ const NO_EMAIL = '';
 
 export const useSessionState = create<ISessionState>()(
   persist(
-    set => ({
+    (set, get) => ({
       email: NO_EMAIL,
       isSignedIn: undefined,
       isAppReady: false,
-      restoreSessionFromStorage: email =>
+      restoreSessionFromStorage: () =>
         set(() => ({
-          email,
-          isSignedIn: email !== NO_EMAIL,
+          email: get().email,
+          isSignedIn: get().email !== NO_EMAIL,
           isAppReady: true,
         })),
       login: email => set(() => ({email, isSignedIn: true})),
