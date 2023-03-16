@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {MainStackParamList} from './MainStack';
 import {NavigationContainer} from '@react-navigation/native';
@@ -13,16 +13,15 @@ const Stack = createNativeStackNavigator<MainStackParamList>();
 
 const MainNavigator = () => {
   const {isConnected} = useCheckInternetConnection();
-  const {isAppReady, isSignedIn, email, restoreSessionFromStorage} = useSessionState();
-
-  useEffect(() => {
-    restoreSessionFromStorage(email);
-  }, []);
+  const {isAppReady, isSignedIn, email} = useSessionState();
 
   if (!isAppReady) return <SplashScreen />;
 
   if (!isConnected) return <NoInternetScreen />;
 
+  {
+    console.log({isSignedIn, email, isAppReady});
+  }
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
