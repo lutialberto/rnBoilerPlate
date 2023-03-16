@@ -4,35 +4,39 @@ import {TRANSLATION_SCREENS} from '~/constants/Translator';
 import AppScreenContainer from '~/components/containers/screenContainer/AppScreenContainer';
 import GenericScreenHeader from '~/components/containers/genericScreenHeader/GenericScreenHeader';
 import PrimaryText from '~/components/texts/primaryText/PrimaryText';
-import SendEmailForm from '~/screens/home/screens/forms/screens/sendEmail/components/sendEmailForm/SendEmailForm';
+import {IFormErrors} from '~/hooks/forms/Models';
 import {useNavigation} from '@react-navigation/native';
 import {MainScreenNavigationType} from '~/navigation/MainStack';
-import {SendEmailFormInputs} from '~/screens/home/screens/forms/screens/sendEmail/models/SendEmailFormInputs';
-import {IFormErrors} from '~/hooks/forms/Models';
-import {ROUTE_REGISTER_EMAIL_VERIFICATION} from '~/navigation/routes/NotSignedInRoutes';
+import {ROUTE_LOGIN} from '~/navigation/routes/NotSignedInRoutes';
+import {PersonalDataFormInputs} from './models/PersonalDataFormInputs';
+import PersonalDataForm from './components/personalDataForm/PersonalDataForm';
 
-const translator = TRANSLATION_SCREENS.welcome.screens.register.screens.sendEmail;
+const translator = TRANSLATION_SCREENS.welcome.screens.register.screens.personalData;
 
-const RegisterScreen = () => {
+const PersonalDataScreen = () => {
   const navigator = useNavigation<MainScreenNavigationType>();
 
-  const onSuccess = (values: SendEmailFormInputs) => {
-    navigator.navigate(ROUTE_REGISTER_EMAIL_VERIFICATION, {email: values.email});
+  const onSuccess = (values: PersonalDataFormInputs) => {
+    navigator.navigate(ROUTE_LOGIN);
   };
 
-  const onError = (values: SendEmailFormInputs, errors: IFormErrors<SendEmailFormInputs>) => {};
+  const onError = (
+    values: PersonalDataFormInputs,
+    error: IFormErrors<PersonalDataFormInputs>,
+  ) => {};
+
   return (
     <AppScreenContainer>
       <GenericScreenHeader title={translator.header} />
       <PrimaryText text={translator.message} />
       <View style={styles.formContainer}>
-        <SendEmailForm onSuccess={onSuccess} onError={onError} />
+        <PersonalDataForm onSuccess={onSuccess} onError={onError} />
       </View>
     </AppScreenContainer>
   );
 };
 
-export default RegisterScreen;
+export default PersonalDataScreen;
 
 const styles = StyleSheet.create({
   formContainer: {
