@@ -19,9 +19,6 @@ const MainNavigator = () => {
 
   if (!isConnected) return <NoInternetScreen />;
 
-  {
-    console.log({isSignedIn, email, isAppReady});
-  }
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>

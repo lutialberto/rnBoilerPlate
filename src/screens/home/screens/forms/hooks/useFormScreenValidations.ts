@@ -10,16 +10,13 @@ export const useFormScreenValidations = () => {
   } = useValidations();
 
   const validateForm = (values: AppFormInputs) => {
-    const {password, otpCode, firstName, lastName, flag, selectedOption, optionsWithSearch} =
-      values;
+    const {password, otpCode, firstName, flag, selectedOption, optionsWithSearch, picture} = values;
 
     let errorsFound: any = {};
     const passwordWithErrors = IsPasswordOk(password);
     if (passwordWithErrors) errorsFound.password = passwordWithErrors;
 
     if (IsEmpty(firstName)) errorsFound.firstName = TRANSLATION_VALIDATIONS.required;
-
-    if (IsEmpty(lastName)) errorsFound.lastName = TRANSLATION_VALIDATIONS.required;
 
     if (!flag) errorsFound.flag = TRANSLATION_VALIDATIONS.required;
 
@@ -30,6 +27,9 @@ export const useFormScreenValidations = () => {
 
     const otpWithErrors = IsOtpNumberOk(otpCode, 4);
     if (otpWithErrors) errorsFound.otpCode = otpWithErrors;
+
+    if (IsEmpty(picture.name)) errorsFound.picture = TRANSLATION_VALIDATIONS.required;
+    else if (picture.size === 0) errorsFound.picture = TRANSLATION_VALIDATIONS.emptyFile;
 
     return errorsFound;
   };

@@ -60,6 +60,7 @@ export const TRANSLATOR = {
         minLength: 'Debe tener un mínimo de {min} caracteres',
         maxLength: 'Debe tener un máximo de {max} caracteres',
         passwordNotConfirmed: 'Contraseña y confirmar contraseña no son iguales',
+        emptyFile: 'El archivo está vacío',
       },
       toasts: {
         goToStore: {
@@ -219,11 +220,11 @@ export const TRANSLATOR = {
               passwordPlaceholder: 'Ingresa tu contraseña',
               firstNameLabel: 'Nombre',
               firstNamePlaceholder: 'Ingresa tu nombre',
-              lastNameLabel: 'Apellido',
-              lastNamePlaceholder: 'Ingresa tu apellido',
               optionsLabel: 'Opciones',
               optionsWithSearchLabel: 'Tiene buscador',
               flagLabel: 'Booleano',
+              pictureLabel: 'Foto',
+              picturePlaceholder: 'Subir archivo...',
             },
             forms: {
               login: {

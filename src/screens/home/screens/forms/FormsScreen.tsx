@@ -18,21 +18,29 @@ import {
 import {useNavigation} from '@react-navigation/native';
 import {MainScreenNavigationType} from '~/navigation/MainStack';
 import {ScrollView, StyleSheet, View} from 'react-native';
+import FileUploadInput from '~/components/forms/inputs/fileUploadInput/FileUploadInput';
+import {useFileUpload} from '~/hooks/fileUpload/useFileUpload';
 
 const translator = TRANSLATION_SCREENS.home.screens.forms;
 
 const FormsScreen = () => {
   const navigator = useNavigation<MainScreenNavigationType>();
+  const {uploadSingleFile} = useFileUpload();
   const {validateForm} = useFormScreenValidations();
   const {errors, handleChange, handleSubmit, values} = useForm({
     defaultValues: {
       password: '',
       firstName: '',
-      lastName: '',
       flag: false,
       selectedOption: '',
       optionsWithSearch: '',
       otpCode: '',
+      picture: {
+        data: '',
+        name: '',
+        size: 0,
+        type: '',
+      },
     },
     validateForm,
     onSuccess: values => console.log('success', {values}),
@@ -56,13 +64,6 @@ const FormsScreen = () => {
         errorMessage={errors?.firstName}
         label={translator.form.firstNameLabel}
         placeholder={translator.form.firstNamePlaceholder}
-      />
-      <GenericInput
-        value={values.lastName}
-        onChange={value => handleChange('lastName', value)}
-        errorMessage={errors?.lastName}
-        label={translator.form.lastNameLabel}
-        placeholder={translator.form.lastNamePlaceholder}
       />
       <BooleanInput
         value={values.flag}
@@ -98,6 +99,17 @@ const FormsScreen = () => {
         onChange={value => handleChange('otpCode', value)}
         errorMessage={errors?.otpCode}
         length={4}
+      />
+      <FileUploadInput
+        handlePickDocument={async () => {
+          const file = await uploadSingleFile();
+          handleChange('picture', file);
+        }}
+        onChange={value => handleChange('picture', value)}
+        value={values.picture}
+        errorMessage={errors?.picture}
+        label={translator.form.pictureLabel}
+        placeholder={translator.form.picturePlaceholder}
       />
       <PrimaryButton onPress={handleSubmit} label={TRANSLATION_BUTTONS.save} />
       <ScrollView contentContainerStyle={styles.container}>
