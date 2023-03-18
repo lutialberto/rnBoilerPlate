@@ -10,6 +10,7 @@ import {useThemeHandler} from '~/hooks/theme/useThemeHandler';
 import {ColorProps} from '~/hooks/theme/Models';
 import ShareButton from '~/components/buttons/shareButton/ShareButton';
 import GenericScreenHeader from '~/components/containers/genericScreenHeader/GenericScreenHeader';
+import DownloadButton from '~/components/buttons/downloadButton/DownloadButton';
 
 const translator = TRANSLATION_SCREENS.home.screens.buttons;
 const {vw} = useDimentions();
@@ -62,6 +63,7 @@ const ButtonsScreen = () => {
         containerStyle={styles.button}
         message={translator.shareTemplate}
       />
+      <DownloadButton onPress={() => {}} containerStyle={styles.button} />
     </AppScreenContainer>
   );
 };
