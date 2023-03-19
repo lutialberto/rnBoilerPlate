@@ -19,6 +19,7 @@ export const TRANSLATOR = {
         resend: 'Reenviar',
         enter: 'Ingresar',
         register: 'Registrarse',
+        download: 'Descargar',
       },
       inputs: {
         selector: 'Selecione...',
@@ -80,6 +81,16 @@ export const TRANSLATOR = {
         },
         copyToClipboard: {
           text2: 'fue copiado al portapapeles!',
+        },
+        download: {
+          success: {
+            text1: 'Descarga completada',
+            text2: 'Descargaste {{file}}',
+          },
+          error: {
+            text1: 'Descarga fallida',
+            text2: 'Ocurrió un error intentando realizar la descarga',
+          },
         },
       },
       forms: {
