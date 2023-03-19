@@ -49,7 +49,6 @@ const getStyles = (colors: ColorProps) => {
     },
     childrenContainer: {
       flex: 1,
-      alignItems: 'center',
       justifyContent: 'center',
     },
   });

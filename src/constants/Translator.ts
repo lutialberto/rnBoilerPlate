@@ -47,7 +47,19 @@ export const TRANSLATOR = {
       },
       errors: {
         apiCallErrorMessage:
-          'Se ha producido un error en la aplicación. Por favor intente mas tarde',
+          'Se ha producido un error en la aplicación. Por favor intente nuevamente mas tarde',
+        globalErrorBoundary: {
+          title: 'Oops,\nha ocurrido un error',
+          message1: 'La app se encontró con un problema y no puede continuar',
+          message2: 'Presiona el botón debajo para reiniciar la app',
+          message3: 'Por favor, no dudes en contactarnos si el problema persiste',
+          restart: 'Reiniciar aplicación',
+          contact: 'Contactanos',
+          contactForm: {
+            commentLabel: 'Comentarios',
+            commentPlaceholder: 'Ingresa toda la información que creas relevante...',
+          },
+        },
       },
       validations: {
         required: 'El campo es requerido',

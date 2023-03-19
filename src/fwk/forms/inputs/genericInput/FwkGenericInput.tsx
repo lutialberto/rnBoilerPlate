@@ -23,6 +23,7 @@ const FwkGenericInput = ({
   style,
   onBlur = () => {},
   onFocus = () => {},
+  multiline = false,
 }: IFwkGenericInputProps) => {
   const [passwordHidden, setPasswordHidden] = useState(type === 'password');
 
@@ -48,6 +49,7 @@ const FwkGenericInput = ({
           onChangeText={value => onChange(value)}
           editable={enabled}
           secureTextEntry={passwordHidden}
+          multiline={multiline}
         />
         {type === 'password' && enabled && (
           <TouchableOpacity onPress={() => setPasswordHidden((prev: boolean) => !prev)}>

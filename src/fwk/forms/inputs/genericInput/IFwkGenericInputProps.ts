@@ -20,4 +20,5 @@ export interface IFwkGenericInputProps {
   inputContainerStyle?: StyleProp<ViewStyle>;
   onFocus?: () => void;
   onBlur?: () => void;
+  multiline?: boolean;
 }
