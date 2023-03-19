@@ -22,7 +22,12 @@ const FwkGenericModal = ({
   const styles = getStyles(colors);
 
   return (
-    <Modal visible={isVisible} onDismiss={onClose} transparent animationType={animationType}>
+    <Modal
+      visible={isVisible}
+      onDismiss={onClose}
+      transparent
+      animationType={animationType}
+      onRequestClose={() => onClose()}>
       <View style={mainContainerStyle}>
         <Pressable
           style={[styles.transparentArea, {backgroundColor: transparentAreaBackgroundColor}]}
