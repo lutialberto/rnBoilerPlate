@@ -63,7 +63,13 @@ const ButtonsScreen = () => {
         containerStyle={styles.button}
         message={translator.shareTemplate}
       />
-      <DownloadButton onPress={() => {}} containerStyle={styles.button} />
+      <DownloadButton
+        onPress={() => {}}
+        containerStyle={styles.button}
+        fileExtension="jpg"
+        fileName="rnboilerplateTestImage"
+        url="https://i.pinimg.com/736x/87/2b/46/872b463134db6ed9bb62c59dc2191a2e.jpg"
+      />
     </AppScreenContainer>
   );
 };
