@@ -1,18 +1,21 @@
-import {StyleSheet} from 'react-native';
-import React from 'react';
+import {StyleSheet, TextInput} from 'react-native';
+import React, {forwardRef} from 'react';
 import {IFwkGenericInputProps} from '~/fwk/forms/inputs/genericInput/IFwkGenericInputProps';
 import GenericInput from '../genericInput/GenericInput';
 
-const MultilineInput = ({style, inputContainerStyle, ...props}: IFwkGenericInputProps) => {
-  return (
-    <GenericInput
-      {...props}
-      multiline
-      inputContainerStyle={[styles.inputContainer, inputContainerStyle]}
-      style={[styles.input, style]}
-    />
-  );
-};
+const MultilineInput = forwardRef<TextInput, IFwkGenericInputProps>(
+  ({style, inputContainerStyle, ...props}, ref) => {
+    return (
+      <GenericInput
+        {...props}
+        multiline
+        inputContainerStyle={[styles.inputContainer, inputContainerStyle]}
+        style={[styles.input, style]}
+        ref={ref}
+      />
+    );
+  },
+);
 
 export default MultilineInput;
 
