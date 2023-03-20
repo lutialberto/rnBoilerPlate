@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import React from 'react';
+import {StyleSheet, TextInput} from 'react-native';
+import React, {useRef} from 'react';
 import {IFormProps} from '~/models/IFormProps';
 import {PersonalDataFormInputs} from '../../models/PersonalDataFormInputs';
 import {usePersonalDataValidations} from '../../hooks/usePersonalDataValidation';
@@ -13,6 +13,7 @@ const translatorButtons = TRANSLATION_BUTTONS;
 const translator = TRANSLATION_SCREENS.welcome.screens.register.screens.personalData.form;
 
 const PersonalDataForm = ({onError, onSuccess}: IFormProps<PersonalDataFormInputs>) => {
+  const addressRef = useRef<TextInput>(null);
   const {validateForm} = usePersonalDataValidations();
   const {errors, handleChange, handleSubmit, values} = useForm({
     defaultValues: {
@@ -33,6 +34,7 @@ const PersonalDataForm = ({onError, onSuccess}: IFormProps<PersonalDataFormInput
         errorMessage={errors?.fullName}
         label={translator.fullNameLabel}
         placeholder={translator.fullNamePlaceholder}
+        onSubmit={() => addressRef.current?.focus()}
       />
       <GenericInput
         value={values.address}
@@ -40,6 +42,7 @@ const PersonalDataForm = ({onError, onSuccess}: IFormProps<PersonalDataFormInput
         errorMessage={errors?.address}
         label={translator.addressLabel}
         placeholder={translator.addressPlaceholder}
+        ref={addressRef}
       />
       <SelectInput
         value={values.gender}

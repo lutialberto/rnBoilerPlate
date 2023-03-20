@@ -1,5 +1,5 @@
-import React from 'react';
-import {StyleSheet} from 'react-native';
+import React, {useRef} from 'react';
+import {StyleSheet, TextInput} from 'react-native';
 import {IFormProps} from '~/models/IFormProps';
 import {ChangePasswordFormInputs} from '../../models/ChangePasswordFormInputs';
 import PrimaryButton from '~/components/buttons/primaryButton/PrimaryButton';
@@ -12,6 +12,7 @@ const translator = TRANSLATION_BUTTONS;
 const translatorForm = TRANSLATOR.components.forms;
 
 const ChangePasswordForm = ({onError, onSuccess}: IFormProps<ChangePasswordFormInputs>) => {
+  const passwordConfirmRef = useRef<TextInput>(null);
   const {validateForm} = useChangePasswordValidations();
   const {errors, handleChange, handleSubmit, values} = useForm({
     defaultValues: {
@@ -32,6 +33,7 @@ const ChangePasswordForm = ({onError, onSuccess}: IFormProps<ChangePasswordFormI
         label={translatorForm.passwordLabel}
         placeholder={translatorForm.passwordPlaceholder}
         type="password"
+        onSubmit={() => passwordConfirmRef.current?.focus()}
       />
       <GenericInput
         value={values.passwordConfirm}
@@ -40,6 +42,8 @@ const ChangePasswordForm = ({onError, onSuccess}: IFormProps<ChangePasswordFormI
         label={translatorForm.passwordConfirmLabel}
         placeholder={translatorForm.passwordConfirmPlaceholder}
         type="password"
+        ref={passwordConfirmRef}
+        onSubmit={handleSubmit}
       />
       <PrimaryButton
         onPress={handleSubmit}

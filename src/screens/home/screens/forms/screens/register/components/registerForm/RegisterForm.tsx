@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {IFormProps} from '~/models/IFormProps';
 import {RegisterFormInputs} from '../../models/RegisterFormInputs';
 import GenericInput from '~/components/forms/inputs/genericInput/GenericInput';
@@ -6,11 +6,15 @@ import {useRegisterValidations} from '../../hooks/useRegisterValidations';
 import {useForm} from '~/hooks/forms/useForm';
 import PrimaryButton from '~/components/buttons/primaryButton/PrimaryButton';
 import {TRANSLATION_SCREENS, TRANSLATOR} from '~/constants/Translator';
+import {TextInput} from 'react-native/types';
 
 const translator = TRANSLATION_SCREENS.home.screens.forms.forms.register;
 const translatorForm = TRANSLATOR.components.forms;
 
 const RegisterForm = ({onSuccess, onError}: IFormProps<RegisterFormInputs>) => {
+  const emailRef = useRef<TextInput>(null);
+  const passwordRef = useRef<TextInput>(null);
+  const passwordConfirmRef = useRef<TextInput>(null);
   const {validateForm} = useRegisterValidations();
   const {errors, handleChange, handleSubmit, values} = useForm({
     defaultValues: {
@@ -32,6 +36,7 @@ const RegisterForm = ({onSuccess, onError}: IFormProps<RegisterFormInputs>) => {
         errorMessage={errors?.fullName}
         label={translator.form.fullNameLabel}
         placeholder={translator.form.fullNamePlaceholder}
+        onSubmit={() => emailRef.current?.focus()}
       />
       <GenericInput
         value={values.email}
@@ -39,6 +44,8 @@ const RegisterForm = ({onSuccess, onError}: IFormProps<RegisterFormInputs>) => {
         errorMessage={errors?.email}
         label={translatorForm.emailLabel}
         placeholder={translatorForm.emailPlaceholder}
+        ref={emailRef}
+        onSubmit={() => passwordRef.current?.focus()}
       />
       <GenericInput
         value={values.password}
@@ -47,6 +54,8 @@ const RegisterForm = ({onSuccess, onError}: IFormProps<RegisterFormInputs>) => {
         label={translatorForm.passwordLabel}
         placeholder={translatorForm.passwordPlaceholder}
         type="password"
+        ref={passwordRef}
+        onSubmit={() => passwordConfirmRef.current?.focus()}
       />
       <GenericInput
         value={values.passwordConfirm}
@@ -55,6 +64,8 @@ const RegisterForm = ({onSuccess, onError}: IFormProps<RegisterFormInputs>) => {
         label={translatorForm.passwordConfirmLabel}
         placeholder={translatorForm.passwordConfirmPlaceholder}
         type="password"
+        ref={passwordConfirmRef}
+        onSubmit={handleSubmit}
       />
       <PrimaryButton onPress={handleSubmit} label={translator.form.submit} />
     </>
