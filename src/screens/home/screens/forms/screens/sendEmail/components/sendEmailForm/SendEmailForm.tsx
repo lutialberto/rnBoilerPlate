@@ -29,6 +29,7 @@ const SendEmailForm = ({onSuccess, onError}: IFormProps<SendEmailFormInputs>) =>
         errorMessage={errors?.email}
         label={translatorForm.emailLabel}
         placeholder={translatorForm.emailPlaceholder}
+        onSubmit={handleSubmit}
       />
       <PrimaryButton
         onPress={handleSubmit}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import AppScreenContainer from '~/components/containers/screenContainer/AppScreenContainer';
 import GenericScreenHeader from '~/components/containers/genericScreenHeader/GenericScreenHeader';
 import {TRANSLATION_BUTTONS, TRANSLATION_SCREENS} from '~/constants/Translator';
@@ -17,13 +17,15 @@ import {
 } from '~/navigation/routes/SignedInRoutes';
 import {useNavigation} from '@react-navigation/native';
 import {MainScreenNavigationType} from '~/navigation/MainStack';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, TextInput} from 'react-native';
 import FileUploadInput from '~/components/forms/inputs/fileUploadInput/FileUploadInput';
 import {useFileUpload} from '~/hooks/fileUpload/useFileUpload';
 
 const translator = TRANSLATION_SCREENS.home.screens.forms;
 
 const FormsScreen = () => {
+  const firstNameRef = useRef<TextInput>(null);
+
   const navigator = useNavigation<MainScreenNavigationType>();
   const {uploadSingleFile} = useFileUpload();
   const {validateForm} = useFormScreenValidations();
@@ -57,6 +59,7 @@ const FormsScreen = () => {
         label={translator.form.passwordLabel}
         placeholder={translator.form.passwordPlaceholder}
         type="password"
+        onSubmit={() => firstNameRef.current?.focus()}
       />
       <GenericInput
         value={values.firstName}
@@ -64,6 +67,7 @@ const FormsScreen = () => {
         errorMessage={errors?.firstName}
         label={translator.form.firstNameLabel}
         placeholder={translator.form.firstNamePlaceholder}
+        ref={firstNameRef}
       />
       <BooleanInput
         value={values.flag}

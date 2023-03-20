@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import GenericModal from '~/components/containers/modals/genericModal/GenericModal';
 import {IContactUsModalProps} from './IContactUsModalProps';
 import GenericInput from '~/components/forms/inputs/genericInput/GenericInput';
@@ -9,12 +9,14 @@ import PrimaryButton from '~/components/buttons/primaryButton/PrimaryButton';
 import RNRestart from 'react-native-restart';
 import MultilineInput from '~/components/forms/inputs/multilineInput/MultilineInput';
 import {useDimentions} from '~/hooks/useDimentions';
+import {TextInput} from 'react-native/types';
 
 const translator = TRANSLATOR.components.forms;
 const translatorForm = TRANSLATOR.components.errors.globalErrorBoundary.contactForm;
 const {vh} = useDimentions();
 
 const ContactUsModal = ({onClose, showModal}: IContactUsModalProps) => {
+  const commentRef = useRef<TextInput>(null);
   const {validateForm} = useContactUsValidations();
   const {errors, handleChange, handleSubmit, values} = useForm({
     defaultValues: {
@@ -40,6 +42,7 @@ const ContactUsModal = ({onClose, showModal}: IContactUsModalProps) => {
         errorMessage={errors?.email}
         label={translator.emailLabel}
         placeholder={translator.emailPlaceholder}
+        onSubmit={() => commentRef.current?.focus()}
       />
       <MultilineInput
         value={values.comment}
@@ -48,6 +51,8 @@ const ContactUsModal = ({onClose, showModal}: IContactUsModalProps) => {
         label={translatorForm.commentLabel}
         placeholder={translatorForm.commentPlaceholder}
         style={{height: vh * 35}}
+        ref={commentRef}
+        onSubmit={handleSubmit}
       />
       <PrimaryButton
         onPress={handleSubmit}

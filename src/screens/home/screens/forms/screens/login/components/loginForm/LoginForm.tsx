@@ -1,5 +1,5 @@
-import React from 'react';
-import {Pressable, StyleSheet} from 'react-native';
+import React, {useRef} from 'react';
+import {Pressable, StyleSheet, TextInput} from 'react-native';
 import GenericInput from '~/components/forms/inputs/genericInput/GenericInput';
 import {useForm} from '~/hooks/forms/useForm';
 import {TRANSLATION_BUTTONS, TRANSLATOR} from '~/constants/Translator';
@@ -13,6 +13,7 @@ import {ColorProps} from '~/hooks/theme/Models';
 const translator = TRANSLATOR.components.forms;
 
 const LoginForm = ({onError, onSuccess, handlePasswordRecovery}: ILoginFormProps) => {
+  const passwordRef = useRef<TextInput>(null);
   const {getColors} = useThemeHandler();
   const colors = getColors();
   const styles = getStyles(colors);
@@ -36,6 +37,7 @@ const LoginForm = ({onError, onSuccess, handlePasswordRecovery}: ILoginFormProps
         errorMessage={errors?.email}
         label={translator.emailLabel}
         placeholder={translator.emailPlaceholder}
+        onSubmit={() => passwordRef.current?.focus()}
       />
       <GenericInput
         value={values.password}
@@ -44,6 +46,8 @@ const LoginForm = ({onError, onSuccess, handlePasswordRecovery}: ILoginFormProps
         label={translator.passwordLabel}
         placeholder={translator.passwordPlaceholder}
         type="password"
+        ref={passwordRef}
+        onSubmit={handleSubmit}
       />
       <Pressable onPress={handlePasswordRecovery}>
         <PrimaryText text={translator.passwordRecovery} style={styles.passwordRecovery} />
