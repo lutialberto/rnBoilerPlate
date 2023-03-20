@@ -11,12 +11,12 @@ import {
   ROUTE_FORMS,
   ROUTE_LISTS,
   ROUTE_LOADING,
+  ROUTE_MENU,
   ROUTE_MODALS,
   ROUTE_TEXTS,
   ROUTE_TOASTS,
   ROUTE_USER_PREFERENCES,
 } from '~/navigation/routes/SignedInRoutes';
-import GenericScreenHeader from '~/components/containers/genericScreenHeader/GenericScreenHeader';
 import Logout from './components/logout/Logout';
 
 const translator = TRANSLATION_SCREENS.home;
@@ -60,6 +60,10 @@ const HomeScreen = () => {
     {
       label: translator.buttons.lists,
       onPress: () => navigator.navigate(ROUTE_LISTS),
+    },
+    {
+      label: translator.buttons.menu,
+      onPress: () => navigator.navigate(ROUTE_MENU),
     },
   ];
 

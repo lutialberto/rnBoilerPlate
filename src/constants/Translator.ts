@@ -185,6 +185,7 @@ export const TRANSLATOR = {
           about: 'Acerca de la app',
           userPreferences: 'Preferencias de usuario',
           lists: 'Tipos de listas',
+          menu: 'Menu',
         },
         screens: {
           buttons: {
@@ -235,6 +236,9 @@ export const TRANSLATOR = {
               info1: 'Mensaje info1',
               info2: 'Mensaje info2',
             },
+          },
+          menu: {
+            header: 'Menus',
           },
           forms: {
             header: 'Formularios',
