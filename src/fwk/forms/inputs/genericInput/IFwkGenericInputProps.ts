@@ -21,4 +21,5 @@ export interface IFwkGenericInputProps {
   onFocus?: () => void;
   onBlur?: () => void;
   multiline?: boolean;
+  onSubmit?: () => void;
 }
