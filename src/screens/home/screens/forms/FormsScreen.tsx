@@ -13,6 +13,7 @@ import {StyleSheet, TextInput} from 'react-native';
 import FileUploadInput from '~/components/forms/inputs/fileUploadInput/FileUploadInput';
 import {useFileUpload} from '~/hooks/fileUpload/useFileUpload';
 import MockFormsModal from './components/mockFormsModal/MockFormsModal';
+import DateInput from '~/components/forms/inputs/dateInput/DateInput';
 
 const translator = TRANSLATION_SCREENS.home.screens.forms;
 
@@ -35,6 +36,7 @@ const FormsScreen = () => {
         size: 0,
         type: '',
       },
+      date: undefined,
     },
     validateForm,
     onSuccess: values => console.log('success', {values}),
@@ -107,6 +109,13 @@ const FormsScreen = () => {
         errorMessage={errors?.picture}
         label={translator.form.pictureLabel}
         placeholder={translator.form.picturePlaceholder}
+      />
+      <DateInput
+        onChange={value => handleChange('date', value)}
+        value={values.date}
+        errorMessage={errors?.date}
+        label={translator.form.dateLabel}
+        placeholder={translator.form.datePlaceholder}
       />
       <PrimaryButton onPress={handleSubmit} label={TRANSLATION_BUTTONS.save} />
       <PrimaryButton
