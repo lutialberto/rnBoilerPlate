@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import AppScreenContainer from '~/components/containers/screenContainer/AppScreenContainer';
 import GenericScreenHeader from '~/components/containers/genericScreenHeader/GenericScreenHeader';
 import {TRANSLATION_BUTTONS, TRANSLATION_SCREENS} from '~/constants/Translator';
@@ -9,24 +9,16 @@ import BooleanInput from '~/components/forms/inputs/booleanInput/BooleanInput';
 import {useForm} from '~/hooks/forms/useForm';
 import SelectInput from '~/components/forms/inputs/selectInput/SelectInput';
 import CodeInput from '~/components/forms/inputs/codeInput/CodeInput';
-import {
-  ROUTE_FORMS_CHANGE_PASSWORD,
-  ROUTE_FORMS_LOGIN,
-  ROUTE_FORMS_OTP_CODE_VALIDATION,
-  ROUTE_FORMS_REGISTER,
-} from '~/navigation/routes/SignedInRoutes';
-import {useNavigation} from '@react-navigation/native';
-import {MainScreenNavigationType} from '~/navigation/MainStack';
-import {ScrollView, StyleSheet, TextInput} from 'react-native';
+import {StyleSheet, TextInput} from 'react-native';
 import FileUploadInput from '~/components/forms/inputs/fileUploadInput/FileUploadInput';
 import {useFileUpload} from '~/hooks/fileUpload/useFileUpload';
+import MockFormsModal from './components/mockFormsModal/MockFormsModal';
 
 const translator = TRANSLATION_SCREENS.home.screens.forms;
 
 const FormsScreen = () => {
   const firstNameRef = useRef<TextInput>(null);
-
-  const navigator = useNavigation<MainScreenNavigationType>();
+  const [showModal, setShowModal] = useState(false);
   const {uploadSingleFile} = useFileUpload();
   const {validateForm} = useFormScreenValidations();
   const {errors, handleChange, handleSubmit, values} = useForm({
@@ -52,6 +44,7 @@ const FormsScreen = () => {
   return (
     <AppScreenContainer>
       <GenericScreenHeader title={translator.header} />
+      <MockFormsModal isVisible={showModal} onClose={() => setShowModal(false)} />
       <GenericInput
         value={values.password}
         onChange={value => handleChange('password', value)}
@@ -116,40 +109,15 @@ const FormsScreen = () => {
         placeholder={translator.form.picturePlaceholder}
       />
       <PrimaryButton onPress={handleSubmit} label={TRANSLATION_BUTTONS.save} />
-      <ScrollView contentContainerStyle={styles.container}>
-        <PrimaryButton
-          onPress={() => navigator.navigate(ROUTE_FORMS_LOGIN)}
-          label={translator.forms.login.goToLabel}
-          containerStyle={styles.button}
-        />
-        <PrimaryButton
-          onPress={() => navigator.navigate(ROUTE_FORMS_REGISTER)}
-          label={translator.forms.register.goToLabel}
-          containerStyle={styles.button}
-        />
-        <PrimaryButton
-          onPress={() => navigator.navigate(ROUTE_FORMS_CHANGE_PASSWORD)}
-          label={translator.forms.changePassword.goToLabel}
-          containerStyle={styles.button}
-        />
-        <PrimaryButton
-          onPress={() => navigator.navigate(ROUTE_FORMS_OTP_CODE_VALIDATION)}
-          label={translator.forms.otpCodeValidation.goToLabel}
-          containerStyle={styles.button}
-        />
-      </ScrollView>
+      <PrimaryButton
+        onPress={() => setShowModal(true)}
+        label={translator.moreForms}
+        variant="secondary"
+      />
     </AppScreenContainer>
   );
 };
 
 export default FormsScreen;
 
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 20,
-  },
-  button: {
-    marginHorizontal: 10,
-    marginVertical: 5,
-  },
-});
+const styles = StyleSheet.create({});
