@@ -243,6 +243,7 @@ export const TRANSLATOR = {
           },
           forms: {
             header: 'Formularios',
+            moreForms: 'Ver más formularios',
             form: {
               passwordLabel: 'Contraseña',
               passwordPlaceholder: 'Ingresa tu contraseña',
