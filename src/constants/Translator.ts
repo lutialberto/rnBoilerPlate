@@ -253,6 +253,8 @@ export const TRANSLATOR = {
               flagLabel: 'Booleano',
               pictureLabel: 'Foto',
               picturePlaceholder: 'Subir archivo...',
+              dateLabel: 'Fecha',
+              datePlaceholder: 'Ingresa fecha...',
             },
             forms: {
               login: {

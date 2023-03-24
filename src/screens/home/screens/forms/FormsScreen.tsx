@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import AppScreenContainer from '~/components/containers/screenContainer/AppScreenContainer';
 import GenericScreenHeader from '~/components/containers/genericScreenHeader/GenericScreenHeader';
 import {TRANSLATION_BUTTONS, TRANSLATION_SCREENS} from '~/constants/Translator';
@@ -20,6 +20,7 @@ import {MainScreenNavigationType} from '~/navigation/MainStack';
 import {ScrollView, StyleSheet, TextInput} from 'react-native';
 import FileUploadInput from '~/components/forms/inputs/fileUploadInput/FileUploadInput';
 import {useFileUpload} from '~/hooks/fileUpload/useFileUpload';
+import DateInput from '~/components/forms/inputs/dateInput/DateInput';
 
 const translator = TRANSLATION_SCREENS.home.screens.forms;
 
@@ -43,6 +44,7 @@ const FormsScreen = () => {
         size: 0,
         type: '',
       },
+      date: undefined,
     },
     validateForm,
     onSuccess: values => console.log('success', {values}),
@@ -114,6 +116,13 @@ const FormsScreen = () => {
         errorMessage={errors?.picture}
         label={translator.form.pictureLabel}
         placeholder={translator.form.picturePlaceholder}
+      />
+      <DateInput
+        onChange={value => handleChange('date', value)}
+        value={values.date}
+        errorMessage={errors?.date}
+        label={translator.form.dateLabel}
+        placeholder={translator.form.datePlaceholder}
       />
       <PrimaryButton onPress={handleSubmit} label={TRANSLATION_BUTTONS.save} />
       <ScrollView contentContainerStyle={styles.container}>
