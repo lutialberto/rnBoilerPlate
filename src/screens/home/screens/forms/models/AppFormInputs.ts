@@ -8,4 +8,5 @@ export interface AppFormInputs {
   password: string;
   otpCode: string;
   picture: File;
+  date: Date | undefined;
 }
