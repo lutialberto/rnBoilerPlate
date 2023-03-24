@@ -186,6 +186,7 @@ export const TRANSLATOR = {
           userPreferences: 'Preferencias de usuario',
           lists: 'Tipos de listas',
           menu: 'Menu',
+          sliders: 'Tipos de slides',
         },
         screens: {
           buttons: {
@@ -313,6 +314,9 @@ export const TRANSLATOR = {
               header:
                 'Continua scrolleando hacia arriba cuando llegas al tope para refrescar lista (revierte la lista)',
             },
+          },
+          sliders: {
+            header: 'Sliders',
           },
         },
       },

@@ -26,6 +26,7 @@ export type MainStackParamList = {
   UserPreferences: undefined;
   Lists: undefined;
   Menu: undefined;
+  Sliders: undefined;
 
   Forms: undefined;
   'Forms/Login': undefined;
