@@ -7,6 +7,7 @@ export const ROUTE_TOASTS = 'Toasts';
 export const ROUTE_USER_PREFERENCES = 'UserPreferences';
 export const ROUTE_ABOUT = 'About';
 export const ROUTE_LISTS = 'Lists';
+export const ROUTE_MENU = 'Menu';
 export const ROUTE_SLIDERS = 'Sliders';
 
 export const ROUTE_FORMS = 'Forms';
