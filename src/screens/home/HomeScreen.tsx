@@ -15,6 +15,7 @@ import {
   ROUTE_MENU,
   ROUTE_MODALS,
   ROUTE_SLIDERS,
+  ROUTE_TABS,
   ROUTE_TEXTS,
   ROUTE_TOASTS,
   ROUTE_USER_PREFERENCES,
@@ -74,6 +75,10 @@ const HomeScreen = () => {
     {
       label: translator.buttons.biometricAuth,
       onPress: () => navigator.navigate(ROUTE_BIOMETRIC_AUTH),
+    },
+    {
+      label: translator.buttons.tabs,
+      onPress: () => navigator.navigate(ROUTE_TABS),
     },
   ];
 

@@ -1,18 +1,19 @@
 import React from 'react';
-import PrimaryText from '~/components/texts/primaryText/PrimaryText';
 import TabContainer from '~/components/containers/tabs/tabContainer/TabContainer';
+import NewsTab from '../tabs/news/NewsTab';
+import WeatherTab from '../tabs/weather/WeatherTab';
 
 const TabNavigator = () => {
   const tabs = [
     {
-      name: 'Home2',
-      children: <PrimaryText text="home" />,
-      label: 'Home',
+      name: 'News',
+      children: <NewsTab />,
+      label: 'Noticias',
     },
     {
-      name: 'Settings',
-      children: <PrimaryText text="settings" />,
-      label: 'Settings',
+      name: 'Weather',
+      children: <WeatherTab />,
+      label: 'Clima',
     },
   ];
 
