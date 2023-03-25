@@ -187,6 +187,7 @@ export const TRANSLATOR = {
           lists: 'Tipos de listas',
           menu: 'Menu',
           sliders: 'Tipos de slides',
+          biometricAuth: 'Autenticación biométrica',
         },
         screens: {
           buttons: {
@@ -326,6 +327,16 @@ export const TRANSLATOR = {
           },
           sliders: {
             header: 'Sliders',
+          },
+          biometricAuth: {
+            header: 'Autenticación biométrica',
+            toast: {
+              notSupported: 'No hay autenticación biométrica habilitada en el dispositivo',
+              success: 'Autenticación completada exitosamente',
+              error: 'Ocurrió un error mientras se realizaba la autenticación',
+              disabled: 'La autenticación ha sido deshabilitada',
+              cancelled: 'La autenticación ha sido cancelada',
+            },
           },
         },
       },

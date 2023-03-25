@@ -19,6 +19,7 @@ import {
   ROUTE_LISTS,
   ROUTE_MENU,
   ROUTE_SLIDERS,
+  ROUTE_BIOMETRIC_AUTH,
 } from '../routes/SignedInRoutes';
 import ButtonsScreen from '~/screens/home/screens/buttons/ButtonsScreen';
 import TextsScreen from '~/screens/home/screens/texts/TextsScreen';
@@ -35,6 +36,7 @@ import UserPreferencesScreen from '~/screens/home/screens/userPreferences/UserPr
 import ListsScreen from '~/screens/home/screens/lists/ListsScreen';
 import MenuScreen from '~/screens/home/screens/menu/MenuScreen';
 import SlidersScreen from '~/screens/home/screens/sliders/SlidersScreen';
+import BiometricAuthScreen from '~/screens/home/screens/biometricAuth/BiometricAuthScreen';
 
 const Stack = createNativeStackNavigator<MainStackParamList>();
 
@@ -51,6 +53,7 @@ const signedInScreens = () => (
     <Stack.Screen name={ROUTE_LISTS} component={ListsScreen} />
     <Stack.Screen name={ROUTE_MENU} component={MenuScreen} />
     <Stack.Screen name={ROUTE_SLIDERS} component={SlidersScreen} />
+    <Stack.Screen name={ROUTE_BIOMETRIC_AUTH} component={BiometricAuthScreen} />
 
     <Stack.Screen name={ROUTE_FORMS} component={FormsScreen} />
     <Stack.Screen name={ROUTE_FORMS_LOGIN} component={LoginScreen} />

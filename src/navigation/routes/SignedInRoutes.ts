@@ -9,6 +9,7 @@ export const ROUTE_ABOUT = 'About';
 export const ROUTE_LISTS = 'Lists';
 export const ROUTE_MENU = 'Menu';
 export const ROUTE_SLIDERS = 'Sliders';
+export const ROUTE_BIOMETRIC_AUTH = 'BiometricAuth';
 
 export const ROUTE_FORMS = 'Forms';
 export const ROUTE_FORMS_LOGIN = 'Forms/Login';
