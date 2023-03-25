@@ -28,6 +28,7 @@ export type MainStackParamList = {
   Menu: undefined;
   Sliders: undefined;
   BiometricAuth: undefined;
+  Tabs: undefined;
 
   Forms: undefined;
   'Forms/Login': undefined;

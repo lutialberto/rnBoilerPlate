@@ -188,6 +188,7 @@ export const TRANSLATOR = {
           menu: 'Menu',
           sliders: 'Tipos de slides',
           biometricAuth: 'Autenticación biométrica',
+          tabs: 'Solapas',
         },
         screens: {
           buttons: {
@@ -337,6 +338,9 @@ export const TRANSLATOR = {
               disabled: 'La autenticación ha sido deshabilitada',
               cancelled: 'La autenticación ha sido cancelada',
             },
+          },
+          tabs: {
+            header: 'Solapas',
           },
         },
       },
