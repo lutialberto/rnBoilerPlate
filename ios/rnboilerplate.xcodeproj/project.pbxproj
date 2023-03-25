@@ -28,7 +28,7 @@
 /* Begin PBXContainerItemProxy section */
 		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			containerPortal = 83CBB9F71A601CBA00E9B192;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = rnboilerplate;
@@ -72,7 +72,7 @@
 		11DDAC4B2DFE465687ABF964 /* Lato-Regular.ttf */ = {isa = PBXFileReference; name = "Lato-Regular.ttf"; path = "../src/assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F077944B2151447F846E006C /* Lato-Thin.ttf */ = {isa = PBXFileReference; name = "Lato-Thin.ttf"; path = "../src/assets/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		53F2CC4A605E4E22AB842FA3 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Lato-ThinItalic.ttf"; path = "../src/assets/fonts/Lato-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7A468A9E32BC4BFCB1A27990 /* OFL.txt */ = {isa = PBXFileReference; name = "OFL.txt"; path = "../src/assets/fonts/OFL.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7A468A9E32BC4BFCB1A27990 /* OFL.txt */ = {isa = PBXFileReference; name = OFL.txt; path = ../src/assets/fonts/OFL.txt; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +142,7 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
-		83CBB9F61A601CBA00E9B192 = {
+		83CBB9F61A601CBA00E9B192 /* PBXGroup */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAE1A68108700A75B9A /* rnboilerplate */,
@@ -179,7 +179,7 @@
 			sourceTree = "<group>";
 		};
 		89C0175C05874CC79386E473 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				346BDD6760BE4696ABAF8258 /* Inter-Black.ttf */,
 				C286C83A76544AA0B94E04E5 /* Inter-Bold.ttf */,
@@ -255,14 +255,14 @@
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+		83CBB9F71A601CBA00E9B192 = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
+						TestTargetID = 13B07F861A680F5B00A75B9A /* rnboilerplate */;
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
@@ -277,7 +277,7 @@
 				en,
 				Base,
 			);
-			mainGroup = 83CBB9F61A601CBA00E9B192;
+			mainGroup = 83CBB9F61A601CBA00E9B192 /* PBXGroup */;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -311,17 +311,17 @@
 				70D60EB891E840C08781D3E9 /* Inter-Regular.ttf in Resources */,
 				76F52598300844519E65AF01 /* Inter-SemiBold.ttf in Resources */,
 				ADAAD75EE9024B2EAACB8C3C /* Inter-Thin.ttf in Resources */,
-				A83F0894C1AE42ACBD141C4F /* Lato-Black.ttf in Resources */,
-				DBB41290BCCF4EAB815E3ED3 /* Lato-BlackItalic.ttf in Resources */,
-				5A9F866E2E714D4C87554737 /* Lato-Bold.ttf in Resources */,
-				16837E340D114836814D3478 /* Lato-BoldItalic.ttf in Resources */,
-				89D9DEC535A346A195752DD1 /* Lato-Italic.ttf in Resources */,
-				A123485AAE8C4182875A09CF /* Lato-Light.ttf in Resources */,
-				EB7D0A0CB33A45139675CBB4 /* Lato-LightItalic.ttf in Resources */,
-				D2434E8FFCD84F8FA08B7BEE /* Lato-Regular.ttf in Resources */,
-				B79A630901B646DB8C6866DE /* Lato-Thin.ttf in Resources */,
-				57FA248403B54152AD1DB758 /* Lato-ThinItalic.ttf in Resources */,
-				5F4A274AA7884C4A9055A2C8 /* OFL.txt in Resources */,
+				A83F0894C1AE42ACBD141C4F,
+				DBB41290BCCF4EAB815E3ED3,
+				5A9F866E2E714D4C87554737,
+				16837E340D114836814D3478,
+				89D9DEC535A346A195752DD1,
+				A123485AAE8C4182875A09CF,
+				EB7D0A0CB33A45139675CBB4,
+				D2434E8FFCD84F8FA08B7BEE,
+				B79A630901B646DB8C6866DE,
+				57FA248403B54152AD1DB758,
+				5F4A274AA7884C4A9055A2C8,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +516,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = rnboilerplateTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,7 +540,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = rnboilerplateTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -658,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -722,7 +722,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -776,5 +776,5 @@
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+	rootObject = 83CBB9F71A601CBA00E9B192;
 }
