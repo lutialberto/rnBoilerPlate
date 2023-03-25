@@ -300,6 +300,7 @@ export const TRANSLATOR = {
               empty: 'Lista vacía',
               fetchMore: 'Fetch manual',
               search: 'Busqueda local',
+              infiniteScroll: 'Scroll infinito',
             },
             emptyList: {
               header: 'Lista sin datos',
@@ -316,6 +317,11 @@ export const TRANSLATOR = {
             pullDownList: {
               header:
                 'Continua scrolleando hacia arriba cuando llegas al tope para refrescar lista (revierte la lista)',
+            },
+            infiniteScroll: {
+              header:
+                'Continua scrolleando hacia abajo que la app seguirá agregando items a la lista cuando te acerques al final',
+              noMoreData: 'Se llego al final',
             },
           },
           sliders: {
