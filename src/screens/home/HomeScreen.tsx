@@ -7,6 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import {MainScreenNavigationType} from '~/navigation/MainStack';
 import {
   ROUTE_ABOUT,
+  ROUTE_BIOMETRIC_AUTH,
   ROUTE_BUTTONS,
   ROUTE_FORMS,
   ROUTE_LISTS,
@@ -69,6 +70,10 @@ const HomeScreen = () => {
     {
       label: translator.buttons.sliders,
       onPress: () => navigator.navigate(ROUTE_SLIDERS),
+    },
+    {
+      label: translator.buttons.biometricAuth,
+      onPress: () => navigator.navigate(ROUTE_BIOMETRIC_AUTH),
     },
   ];
 

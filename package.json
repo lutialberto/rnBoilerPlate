@@ -41,7 +41,8 @@
     "react-native-toast-message": "^2.1.5",
     "rn-fetch-blob": "^0.12.0",
     "zustand": "^4.3.2",
-    "expo": "^48.0.0"
+    "expo": "^48.0.0",
+    "expo-local-authentication": "~13.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
